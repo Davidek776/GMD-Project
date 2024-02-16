@@ -7,7 +7,7 @@ This blog describes the implementation of my first Unity game called Roll-a-ball
 
 ## Implementation steps
 
-![Game overiew](./Screenshots/introduction_image.png?raw=true)
+![Game overiew](./Screenshots/introduction-image.png?raw=true)
 
 ### Setting up the Game
 In this step, I initialized the project and created a scene from a Basic URP template. After that, I added Ground and Player objects and I modified them for the purpose of this game.
@@ -40,7 +40,7 @@ In this part, I added in PlayerController script to store the amount of collecte
 ![Displaying count value](./Screenshots/displaying-count-value.png?raw=true)
 
 ### Building the Game
-In the last step of the tutorial, I built the game for macOS.
+In the last step of the tutorial, I built the game for WebGL.
  
 
 
