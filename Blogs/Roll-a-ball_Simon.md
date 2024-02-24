@@ -5,6 +5,9 @@
 ### Introduction
 A simple game in Unity to learn basics about this engine.
 
+# Playable version WebGL
+Try out the playable version of this game here (with slight modifications such as jumping): [Roll-a-ball](https://simonfrayer.github.io/Rollaball/)
+
 ### Setting up the game
 Set up was interesting as it was my first ecounter with the editor. I tryed to set up the game so that I have a 'playing field' with walls all around to serve as a natural barrier of the field. As a player I created a ball to which I applyed a Rigidbody element to react to gravity. I also added a 'collectables' to act as game objects that the player will try to collect to win the game. I created a unique materials for different objects in the game as well.
 
