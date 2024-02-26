@@ -2,6 +2,10 @@
 
 ## David's Blog
 
+## Playable Version
+You can play the WebGL version of the game on [the website](https://davidek776.github.io/Rollaball/)
+
+
 ## Introduction
 This blog describes the implementation of my first Unity game called Roll-a-ball based on the tutorial posted on the Unity website.
 
