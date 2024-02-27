@@ -2,16 +2,15 @@
 <!-- Simon 1 -->
 <!-- David 2 -->
 
-# Game Design Document
+# Game Design Document - Lost Together
 
 ## High-Level Concept/Design
 
-### Working title
-
----
 <!-- Simon 1 -->
 ### Game Overview
-Provide a brief overview of the game's concept and design. Explain the core idea, theme, and the player's objective.
+The game is a 2D local multiplayer game for 2 players. There are multiple levels filled with different kind of obstacles and enemies. The player have to colaborate to get through each of the levels. The objective of the game is to complete all the levels, bond with your co-player, and have fun.
+
+To add depth to the 2D game, the background has a parallax effect to spice things up! 🌶️
 
 <!-- David 2 -->
 ### Target Audience
@@ -19,7 +18,9 @@ Identify the target audience for the game. Consider age group, preferences, and 
 
 <!-- Simon 1 -->
 ### Unique Selling Points
-Highlight the unique features or aspects that set your game apart from others in the genre.
+- Local multiplayer
+- Parallax background
+- Easy controlls
 
 ## Product Design
 
@@ -29,15 +30,14 @@ Specify the target platform(s) for the game (e.g., PC, console, mobile) and any 
 
 <!-- Simon 1 -->
 ### Genre
-Define the genre of the game and briefly explain how it fits within that genre.
-
+2D cooperative platformer 🕹️
 <!-- David 2 -->
 ### Art Style
 Describe the intended art style, including visual themes, color schemes, and overall aesthetic.
 
 <!-- Simon 1 -->
 ### Sound Design
-Outline the approach to sound design, including music, sound effects, and voiceovers.
+The overall approach to sound design is to have a thematic background music and unique sound effects. The aim is to also have an AI generated voiceovers.
 
 ## Detailed & Game System Design
 
@@ -47,7 +47,9 @@ Detail the core mechanics and gameplay elements. Explain how player actions and 
 
 <!-- Simon 1 -->
 ### Level Design
-Provide an overview of the level design philosophy and principles. Highlight key levels or environments.
+There are 5 differrent levels in differrent environments. Each of them has a different style of obstacles and enemies to keep the player entertained and guessing. 
+
+The average time for completing a level should besomewhere between 5-8 minutes. ⏱️ 
 
 <!-- David 2 -->
 ### Characters
@@ -57,12 +59,18 @@ Introduce main characters, their roles, and any unique abilities or characterist
 ### User Interface (UI)
 Describe the user interface elements, including menus, HUD, and other on-screen displays.
 
+There should be following UI elements in the game:
+
+- General menu
+- Level selection menu
+- General settings
+
 <!-- David 2 -->
 ### Controls
 Outline the control scheme for different platforms and input devices.
 
 <!-- Simon 1 -->
 ### Technical Specifications
-Provide technical details, such as required hardware specifications and any third-party tools or libraries used.
+This game was developed to be playable on an Arcade machine at VIA University Collage. The Arcade is powered by windows and the requirement was to make the game smaller than 500 MB.
 
 
