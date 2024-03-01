@@ -14,7 +14,7 @@ To add depth to the 2D game, the background has a parallax effect to spice thing
 
 <!-- David 2 -->
 ### Target Audience
-Identify the target audience for the game. Consider age group, preferences, and gaming experience.
+The game is suitable for everyone who is ready for a unique adventure and is ready to cooperate with another player as well. Therefore the game is suitable for two players who are older than 3 years(EC ESRB rating). 
 
 <!-- Simon 1 -->
 ### Unique Selling Points
@@ -26,14 +26,14 @@ Identify the target audience for the game. Consider age group, preferences, and 
 
 <!-- David 2 -->
 ### Platform
-Specify the target platform(s) for the game (e.g., PC, console, mobile) and any specific requirements.
+The game is developed for VIA Arcade Machine.
 
 <!-- Simon 1 -->
 ### Genre
 2D cooperative platformer 🕹️
 <!-- David 2 -->
 ### Art Style
-Describe the intended art style, including visual themes, color schemes, and overall aesthetic.
+The game is designed in a way to give players feeling of having more freedom than other 2D cooperative games usually provide and to also use a game environment that is rarely seen. 
 
 <!-- Simon 1 -->
 ### Sound Design
