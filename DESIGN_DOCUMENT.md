@@ -71,6 +71,9 @@ Outline the control scheme for different platforms and input devices.
 
 <!-- Simon 1 -->
 ### Technical Specifications
-This game was developed to be playable on an Arcade machine at VIA University Collage. The Arcade is powered by windows and the requirement was to make the game smaller than 500 MB.
+- Must be playable on the VIA Arcade Machine
+- NVIDIA GeForce GTX 980 Ti, i5-6600K CPU, 3.50 GHz, 8GB RAM
+- Custom input with two 8-directional sticks and six buttons for each player + two start buttons.
+- The deployed build must not take up more than 500MB of disk space.
 
 
