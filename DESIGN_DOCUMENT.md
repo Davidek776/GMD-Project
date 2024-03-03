@@ -33,7 +33,7 @@ The game is developed for VIA Arcade Machine.
 2D cooperative platformer 🕹️
 <!-- David 2 -->
 ### Art Style
-The game is designed in a way to give players feeling of having more freedom than other 2D cooperative games usually provide and to also use a game environment that is rarely seen. 
+The game is designed to give players a feeling of having more freedom than other 2D cooperative games usually provide and to use a game environment that is rarely seen. To achieve this visual sensation is used parallax animation which is triggered when game characters are moving. Parallax animations will be achieved by moving each layer of the 2D background asset at a different speed. Each level will consist of nicely designed 2D assets, that will be also huge enough to give the players a sensation of freedom.
 
 <!-- Simon 1 -->
 ### Sound Design
@@ -43,7 +43,7 @@ The overall approach to sound design is to have a thematic background music and 
 
 <!-- David 2 -->
 ### Game Mechanics
-Detail the core mechanics and gameplay elements. Explain how player actions and interactions contribute to the overall experience.
+Game characters have to avoid obstacles and enemies and progress at the game level. Characters have to as well collaborate together to help each other pass through the level.
 
 <!-- Simon 1 -->
 ### Level Design
@@ -53,7 +53,16 @@ The average time for completing a level should besomewhere between 5-8 minutes. 
 
 <!-- David 2 -->
 ### Characters
-Introduce main characters, their roles, and any unique abilities or characteristics they possess.
+The main characters are called Ethan and Amelia. 
+
+Ethan is a young adventurous character known for his strength and energy. He is full of energy and therefore his abilities are that he can move heavy stuff. Also thanks to his energy, he can be a source of light and illuminate dark areas in the game.
+
+Amelia is a bit calmer character that has a deep connection with nature. Thanks to her connection with nature she can manipulate water or use wind force to slow down enemies.
+
+They come from a land called Eldonia. Because of the ancient prophecy which tells that once in a thousand years when planets Eldonia, Venius and Plutomius are aligned behind each other somewhere on the planet Eldonia will be generated Astral Relic. As the prophecy foretold, those who touch it will be teleported to planet Venius. With a mission to find the next 11 missing Astral Relics. After all 12 Astral Relics are collected, they will generate an ancient energy that will .......... and that will teleport the characters back to Eldonia.  
+
+Ethan and Amelia were those who randomly found the first Astral Relic and they were sent to a Venius. On a mission to find each 11 missing Astral Relics they have to collaborate to avoid obstacles and enemies.
+
 
 <!-- Simon 1 -->
 ### User Interface (UI)
@@ -67,8 +76,7 @@ There should be following UI elements in the game:
 
 <!-- David 2 -->
 ### Controls
-Outline the control scheme for different platforms and input devices.
-
+The game is developed for an arcade machine, which consists of two joysticks, where each has 8 directions. There are also 6 buttons for each player. 
 <!-- Simon 1 -->
 ### Technical Specifications
 - Must be playable on the VIA Arcade Machine
