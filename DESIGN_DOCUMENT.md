@@ -4,6 +4,8 @@
 
 # Game Design Document - Lost Together
 
+Current version: 1.0
+
 ## High-Level Concept/Design
 
 <!-- Simon 1 -->
