@@ -92,6 +92,6 @@ The game is developed for an arcade machine, which consists of two joysticks, wh
 
 
 # 3 Milestones:
-1. 30.04.2024 - MVP, or minimum viable product, that includes working game mechanics, parallax background, and split camera with 2 players (1 for each camera).
-2. 31.05.2024 - Final Game, a producttaht includes all the effects, sounds, game mechanics, graphics, playable and ready to be deployed.
-3. 06.06.2024 - Hand-In, hand-in of the final version of the game, together with all the documents and videos needed.
+1. 17.03.2024 - Character controllers, Obstacles, Menu, Split Screen
+2. ?.2024 - Environment, Triggers, Collaboration logic between characters, Animations, Character sprites
+3. ?.2024 - Level design, Sound effects, Background music, Possibly: Enemies, 
