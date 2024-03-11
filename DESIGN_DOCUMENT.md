@@ -46,6 +46,10 @@ The overall approach to sound design is to have a thematic background music and 
 <!-- David 2 -->
 ### Game Mechanics
 Game characters have to avoid obstacles and enemies and progress at the game level. Characters have to as well collaborate together to help each other pass through the level.
+## Characters
+The movement for both characters is the same but they have different skills. One of them is strong and can move stuf around and the other one can jump twice as high, this enables the character to get over obstacles that are much higher than others.
+## Obstacles
+There are multiple types of obstacles. Heavy obstacles, high obstacles, mechanical obstacles whichcan only be moved by trigger, there are 2 types of triggers - one for each character
 
 <!-- Simon 1 -->
 ### Level Design
