@@ -7,6 +7,8 @@ public class TriggerButton : MonoBehaviour
     public float buttonPressedOffset = 0.1f;
     private Vector3 buttonPressedPosition;
      private Vector3 initialButtonPosition;
+
+      private bool isPressed = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,19 +22,21 @@ public class TriggerButton : MonoBehaviour
         
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnCollisionStay2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Player1"))
+        if ((collision.gameObject.CompareTag("Player1")) && !isPressed)
         {
             MoveButtonDown();
+            isPressed = true;
         }
     }
 
      private void OnCollisionExit2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Player1"))
+        if ((collision.gameObject.CompareTag("Player1"))&& isPressed)
         {
             MoveButtonUp();
+            isPressed = false;
         }
     }
 
