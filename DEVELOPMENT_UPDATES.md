@@ -9,7 +9,7 @@ pop-out with 3 options(Resume, Menu, Quit).
 For creating Menu UI was used Canvas and Buttons game objects. Buttons have also zoom-in animation, when they are selected.
 
 <img width="400" alt="Screenshot 2024-03-17 at 16 44 28" src="https://github.com/Davidek776/GMD-Project/assets/62095094/2a9b0a21-9c00-43cd-85d4-cb1506ec79f8">
-<img width="400" alt="Screenshot 2024-03-17 at 16 44 55" src="https://github.com/Davidek776/GMD-Project/assets/62095094/9e8aa114-c86a-4091-8e8b-bc033e1a568b">
+<img width="400" alt="Screenshot 2024-03-17 at 16 44 55" src="./Blogs/Screenshots/PauseMenu.png">
 
 ### Character controllers
 We used the new Input system to controll our characters (for now only simple cubes). The reason for choosing the new over the old one was fist of all the convenience of mapping dofferent controllers to the same action (Move and Jump in our case). Secondly, it handles controller reconnection which is always a nice feature to have.
