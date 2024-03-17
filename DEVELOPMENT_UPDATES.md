@@ -4,11 +4,10 @@
 First milestone for this project is on 17th March. Goal of this milestone was to create Character controllers, Obstacles, Menu and Split Screen.
 
 ### Menu
-Menu UI was created at the start of application. It has 3 options (Play, Options, Quit). Also if the user presses ESC-key, then the pause menu will 
-pop-out with 3 options(Resume, Menu, Quit).
-For creating Menu UI was used Canvas and Buttons game objects. Buttons have also zoom-in animation, when they are selected.
+UI menu is displayed at the start of the game. It has 3 options which are Play, Options, and Quit. The game also includes Pause Menu, which is displayed when the user presses the ESC key. Pause Menu consists of 3 options which are Resume, Menu, and Quit.
+For creating Menu UI were used Canvas, and Buttons game objects. Buttons have also zoom-in animation, when they are selected.
 
-<img width="400" alt="Screenshot 2024-03-17 at 16 44 28" src="https://github.com/Davidek776/GMD-Project/assets/62095094/2a9b0a21-9c00-43cd-85d4-cb1506ec79f8">
+<img width="400" alt="Screenshot 2024-03-17 at 16 44 28" src="./Blogs/Screenshots/MenuUI.png">
 <img width="400" alt="Screenshot 2024-03-17 at 16 44 55" src="./Blogs/Screenshots/PauseMenu.png">
 
 ### Character controllers
