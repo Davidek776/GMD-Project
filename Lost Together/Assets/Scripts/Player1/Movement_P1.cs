@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -7,7 +8,7 @@ public class Movement_P1 : MonoBehaviour
 {
     private float speed = 8.0f;
     private float horizontalInput;
-    private float jumpPower = 16.0f;
+    private float jumpPower = 8.0f;
     private bool isFacingRight = true;
 
     public Rigidbody2D rb;
@@ -31,12 +32,11 @@ public class Movement_P1 : MonoBehaviour
             localScale.x *= -1f;
             transform.localScale = localScale;
         }
-
     }
 
     private bool isGrounded()
     {
-        return Physics2D.OverlapCircle(groundCheck.position, 0.2f, groundLayer);
+        return Physics2D.OverlapBox(groundCheck.position, new Vector2(0.5f, 0.1f), 0f, groundLayer);
     }
 
     public void Move(InputAction.CallbackContext context)
@@ -49,11 +49,6 @@ public class Movement_P1 : MonoBehaviour
         if (context.performed && isGrounded())
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpPower);
-        }
-
-        if (context.canceled && rb.velocity.y > 0f)
-        {
-            rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * speed * Time.deltaTime);
         }
     }
 }
