@@ -29,7 +29,7 @@ We decided to use split screen as the arcade machine has 2 sticks and sets of bu
 
 For the future milestone we are thinking about creating a smooth follow behaviour so that the gameplay does not feel so aggresive as now because the camera movements are just very sudden and sharp.
 
-<img width="800" alt="Screenshot 2024-03-17 at 17 29 51" src="https://github.com/Davidek776/GMD-Project/assets/62095094/e40df375-d22e-40ef-9ae5-26cbde831466">
+![Splitscreen](.Blogs/Screenshots/Splitscreen.png?raw=true)
 
 
 
