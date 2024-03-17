@@ -16,6 +16,11 @@ For controlling characters(currenlty just simple Cubes) was used new Input Syste
 
 There are two characters and each of them has Input Actions which are Move and Jump. First character can be moved by either using left stick on gamepad or WASD keys on keyboard and can jump by pressing a space on keyboard or button south on gamepad. Second charactes can be moved by using right stick on gamepad or arrows on keyboard and can jump with pressing J on keyboard or button south on gamepad. Inputs for gamepad could be changed in the future, because we will see how it works on Arcade machine which is using gamepad underneath the hood.
 
+### Split screen
+In the game is used Vertical split screen. This effect was accomplished by using two cameras, where each character has one camera. Each camera is following one player. What can be updated in the future is to have cameras that are smoothly following characters, because right now they are moving immidiately, when characters are moving.
+
+<img width="800" alt="Screenshot 2024-03-17 at 17 29 51" src="https://github.com/Davidek776/GMD-Project/assets/62095094/e40df375-d22e-40ef-9ae5-26cbde831466">
+
 
 
 
