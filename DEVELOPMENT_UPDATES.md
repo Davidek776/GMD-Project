@@ -4,11 +4,10 @@
 First milestone for this project is on 17th March. Goal of this milestone was to create Character controllers, Obstacles, Menu and Split Screen.
 
 ### Menu
-UI menu is displayed at the start of the game. It has 3 options which are Play, Options, and Quit. The game also includes Pause Menu, which is displayed when the user presses the ESC key. Pause Menu consists of 3 options which are Resume, Menu, and Quit.
-For creating Menu UI were used Canvas, and Buttons game objects. Buttons have also zoom-in animation, when they are selected.
+UI menu is displayed at the start of the game. It has 3 options which are Play, Options, and Quit. The game also includes Pause Menu, which is displayed when the user presses the ESC key. Pause Menu consists of 3 options: Resume, Menu, and Quit.
+We used Canvas object for creating the Menu. The buttons all have a zoom-in animation when hover over for better interactibility.
 
-<img width="400" alt="Screenshot 2024-03-17 at 16 44 28" src="./Blogs/Screenshots/MenuUI.png">
-<img width="400" alt="Screenshot 2024-03-17 at 16 44 55" src="./Blogs/Screenshots/PauseMenu.png">
+<img width="400" alt="Main menu" src="./Blogs/Screenshots/MenuUI.png"> <img width="400" alt="Pause menu" src="./Blogs/Screenshots/PauseMenu.png">
 
 ### Character controllers
 We used the new Input system to controll our characters (for now only simple cubes). The reason for choosing the new over the old one was fist of all the convenience of mapping dofferent controllers to the same action (Move and Jump in our case). Secondly, it handles controller reconnection which is always a nice feature to have.
@@ -28,7 +27,7 @@ We decided to use split screen as the arcade machine has 2 sticks and sets of bu
 
 For the future milestone we are thinking about creating a smooth follow behaviour so that the gameplay does not feel so aggresive as now because the camera movements are just very sudden and sharp.
 
-![Splitscreen](./Blogs/Screenshots/Splitscreen.png?raw=true)
+<img width="400" alt="Splitscreen" src="./Blogs/Screenshots/Splitscreen.png">
 
 
 
