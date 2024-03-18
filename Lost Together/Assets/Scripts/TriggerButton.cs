@@ -12,7 +12,7 @@ public class TriggerButton : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-          initialButtonPosition = transform.position;
+        initialButtonPosition = transform.position;
         buttonPressedPosition = initialButtonPosition - new Vector3(0f, buttonPressedOffset, 0f);
     }
 
@@ -22,7 +22,7 @@ public class TriggerButton : MonoBehaviour
         
     }
 
-    private void OnCollisionStay2D(Collision2D collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
         if ((collision.gameObject.CompareTag("Player1")) && !isPressed)
         {
@@ -37,15 +37,22 @@ public class TriggerButton : MonoBehaviour
         {
             MoveButtonUp();
             isPressed = false;
+            Debug.Log("Up");
         }
     }
 
+
      private void MoveButtonDown()
     {
-        transform.position = buttonPressedPosition;
+        // transform.Translate(buttonPressedPosition*Time.deltaTime*1f);
+        transform.position=buttonPressedPosition;
+
     }
     private void MoveButtonUp()
     {
-        transform.position = initialButtonPosition;
+        // Vector3 newVector=initialButtonPosition-transform.position;
+        // transform.Translate(newVector*Time.deltaTime*10f);
+        transform.position=initialButtonPosition;
+
     }
 }
