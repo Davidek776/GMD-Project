@@ -41,7 +41,6 @@ public class TriggerButton : MonoBehaviour
         }
     }
 
-
      private void MoveButtonDown()
     {
         // transform.Translate(buttonPressedPosition*Time.deltaTime*1f);
