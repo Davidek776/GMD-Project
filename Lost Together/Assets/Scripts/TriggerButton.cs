@@ -4,54 +4,58 @@ using UnityEngine;
 
 public class TriggerButton : MonoBehaviour
 {
-    public float buttonPressedOffset = 0.1f;
+    public float buttonPressedOffset = 0.4f;
+    public GameObject playerCollider;
     private Vector3 buttonPressedPosition;
-     private Vector3 initialButtonPosition;
+    private Vector3 initialButtonPosition;
+    private bool isPressed = false;
+    private bool isDelayFinished = false;
 
-      private bool isPressed = false;
-    // Start is called before the first frame update
     void Start()
     {
         initialButtonPosition = transform.position;
         buttonPressedPosition = initialButtonPosition - new Vector3(0f, buttonPressedOffset, 0f);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if ((collision.gameObject.CompareTag("Player1")) && !isPressed)
+        if ((collision.gameObject == playerCollider) && !isPressed)
         {
-            MoveButtonDown();
+            StartCoroutine(MoveButtonDownWithDelay());
             isPressed = true;
         }
     }
 
-     private void OnCollisionExit2D(Collision2D collision)
+    private void OnCollisionExit2D(Collision2D collision)
     {
-        if ((collision.gameObject.CompareTag("Player1"))&& isPressed)
+        if (collision.gameObject == playerCollider)
         {
-            MoveButtonUp();
             isPressed = false;
-            Debug.Log("Up");
+            if (isDelayFinished == true)
+            {
+                MoveButtonUp();
+            }
         }
     }
 
-     private void MoveButtonDown()
+    private IEnumerator MoveButtonDownWithDelay()
     {
-        // transform.Translate(buttonPressedPosition*Time.deltaTime*1f);
-        transform.position=buttonPressedPosition;
+        transform.position = buttonPressedPosition;
 
+        isDelayFinished = false;
+
+        yield return new WaitForSeconds(0.2f);
+
+        isDelayFinished = true;
+
+        if (!isPressed)
+        {
+            MoveButtonUp();
+        }
     }
+
     private void MoveButtonUp()
     {
-        // Vector3 newVector=initialButtonPosition-transform.position;
-        // transform.Translate(newVector*Time.deltaTime*10f);
-        transform.position=initialButtonPosition;
-
+        transform.position = initialButtonPosition;
     }
 }
