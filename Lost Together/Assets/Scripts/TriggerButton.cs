@@ -2,13 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+namespace AYellowpaper.Samples{
 public class TriggerButton : MonoBehaviour
 {
     public float buttonPressedOffset = 0.4f;
     public GameObject playerCollider;
 
-    public InterfaceRefence<ISwitchable> client;
+    public InterfaceReference<ISwitchable> ISwitchable;
 
+	public InterfaceReference<ISwitchable, MonoBehaviour> client;
     private Vector3 buttonPressedPosition;
     private Vector3 initialButtonPosition;
     private bool isPressed = false;
@@ -44,25 +46,30 @@ public class TriggerButton : MonoBehaviour
     private IEnumerator MoveButtonDownWithDelay()
     {
         transform.position = buttonPressedPosition;
-        if(client!=null)
+        
+        if(client!= null){
             client.Activate();
 
+        }
         isDelayFinished = false;
 
         yield return new WaitForSeconds(0.2f);
 
         isDelayFinished = true;
 
-        if (!isPressed)
-        {
-            MoveButtonUp();
-        }
+        // if (!isPressed)
+        // {
+        //     MoveButtonUp();
+        // }
     }
 
     private void MoveButtonUp()
     {
         transform.position = initialButtonPosition;
-        if(client!=null)
-            client.Deactivate();
+        // if(client!= null ){
+        //     client.Deactivate();
+            
+        // }
     }
+}
 }

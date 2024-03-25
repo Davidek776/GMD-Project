@@ -26,6 +26,8 @@ namespace AYellowpaper.Samples
 		public ScriptableObject AttributeRestrictedToScriptableObject;
 		[RequireInterface(typeof(IInteractable))]
 		public MonoBehaviour AttributeRestrictedToMonoBehaviour;
+
+		
 	}
 }
 
