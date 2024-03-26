@@ -8,7 +8,7 @@ public class TriggerButton : MonoBehaviour
     public float buttonPressedOffset = 0.4f;
     public GameObject playerCollider;
 
-    public InterfaceReference<ISwitchable> ISwitchable;
+    // public InterfaceReference<ISwitchable> ISwitchable;
 
 	public InterfaceReference<ISwitchable, MonoBehaviour> client;
     private Vector3 buttonPressedPosition;
@@ -47,10 +47,11 @@ public class TriggerButton : MonoBehaviour
     {
         transform.position = buttonPressedPosition;
         
-        if(client!= null){
-            client.Activate();
+        // if(client!= null){
+        //     client.Activate();
+        // }
 
-        }
+     
         isDelayFinished = false;
 
         yield return new WaitForSeconds(0.2f);
