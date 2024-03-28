@@ -2,11 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace AYellowpaper.Samples{
-public interface ISwitchable
+
+public abstract class ISwitchable:MonoBehaviour
 {
-  public bool IsActive { get; }
-public void Activate();
- public void Deactivate();
-}
+public abstract bool IsActive { get; }
+public abstract void Activate();
+ public abstract void Deactivate();
 }

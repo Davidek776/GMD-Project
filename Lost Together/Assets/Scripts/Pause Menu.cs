@@ -10,7 +10,6 @@ public class PauseMenu : MonoBehaviour
     [SerializeField]
     private GameObject pauseMenu;
 
-
     void Start(){
         pauseMenu.SetActive(false);
     }
