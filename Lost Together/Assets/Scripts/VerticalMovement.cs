@@ -7,6 +7,8 @@ public class VerticalMovement : ISwitchable
     private Coroutine activationCoroutine;
     private Coroutine deactivationCoroutine;
 
+    public float verticalOffset=0.3f;
+
     public override bool IsActive => isActive;
 
     public override void Activate()
@@ -15,7 +17,7 @@ public class VerticalMovement : ISwitchable
             StopCoroutine(deactivationCoroutine);
 
         isActive = true;
-        activationCoroutine = StartCoroutine(ChangeScaleOverTime(Vector3.Scale(transform.localScale, new Vector3(1f, 0.3f, 1f))));
+        activationCoroutine = StartCoroutine(ChangeScaleOverTime(Vector3.Scale(transform.localScale, new Vector3(1f, verticalOffset, 1f))));
     }
 
     public override void Deactivate()

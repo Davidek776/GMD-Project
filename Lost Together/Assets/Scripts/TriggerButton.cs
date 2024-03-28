@@ -56,10 +56,10 @@ public class TriggerButton : MonoBehaviour
 
         isDelayFinished = true;
 
-        // if (!isPressed)
-        // {
-        //     MoveButtonUp();
-        // }
+        if (!isPressed)
+        {
+            MoveButtonUp();
+        }
     }
 
     private void MoveButtonUp()
