@@ -6,7 +6,7 @@ public class Movement_P1 : MonoBehaviour
 {
     private float speed = 8.0f;
     private float horizontalInput;
-    private float jumpPower = 8.0f;
+    public float jumpPower = 8.0f;
     private bool isFacingRight = true;
 
     public Rigidbody2D rb;
