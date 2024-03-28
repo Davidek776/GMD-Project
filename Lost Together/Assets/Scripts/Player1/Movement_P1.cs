@@ -1,6 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
+using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -15,10 +13,18 @@ public class Movement_P1 : MonoBehaviour
     public LayerMask groundLayer;
     public Transform groundCheck;
 
+    Animator animator;
+
+    void Start(){
+        animator = GetComponent<Animator>();
+    }
+
     // Update is called once per frame
     void Update()
     {
         rb.velocity = new Vector2(horizontalInput * speed, rb.velocity.y);
+        animator.SetFloat("xVelocity", Math.Abs(rb.velocity.x));
+        animator.SetFloat("yVelocity", rb.velocity.y);
 
         Flip();
     }
@@ -49,6 +55,15 @@ public class Movement_P1 : MonoBehaviour
         if (context.performed && isGrounded())
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpPower);
+            animator.SetBool("isJumping", true);
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Ground")
+        {
+            animator.SetBool("isJumping", false);
         }
     }
 }
