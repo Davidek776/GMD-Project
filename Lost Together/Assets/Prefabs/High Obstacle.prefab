@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8951161136053113787}
   - component: {fileID: 3017916256537024980}
   - component: {fileID: 4254377197143211732}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: High Obstacle Core
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -140,7 +140,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8421612068332407627}
   - component: {fileID: 140055665601100310}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: High Obstacle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -175,3 +175,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c527fade9dd934700975716ee936d2b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  verticalOffset: 0.3
