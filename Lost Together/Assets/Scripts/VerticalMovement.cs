@@ -7,7 +7,7 @@ public class VerticalMovement : ISwitchable
     private Coroutine activationCoroutine;
     private Coroutine deactivationCoroutine;
 
-    public float verticalOffset=0.3f;
+    public float verticalOffset = 0.3f;
 
     public override bool IsActive => isActive;
 
@@ -32,7 +32,7 @@ public class VerticalMovement : ISwitchable
     {
         float elapsedTime = 0f;
         Vector3 initialScale = transform.localScale;
-        float duration = 1f; 
+        float duration = 1f;
 
         while (elapsedTime < duration)
         {

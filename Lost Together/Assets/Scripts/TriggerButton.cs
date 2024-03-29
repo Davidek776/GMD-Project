@@ -44,12 +44,13 @@ public class TriggerButton : MonoBehaviour
     private IEnumerator MoveButtonDownWithDelay()
     {
         transform.position = buttonPressedPosition;
-        
-        if(client!= null){
+
+        if (client != null)
+        {
             client.Activate();
         }
 
-     
+
         isDelayFinished = false;
 
         yield return new WaitForSeconds(0.2f);
@@ -65,9 +66,10 @@ public class TriggerButton : MonoBehaviour
     private void MoveButtonUp()
     {
         transform.position = initialButtonPosition;
-        if(client!= null ){
+        if (client != null)
+        {
             client.Deactivate();
-            
+
         }
     }
 }
