@@ -8,22 +8,15 @@ public class Movement_P1 : MonoBehaviour
     private float horizontalInput;
     public float jumpPower = 8.0f;
     private bool isFacingRight = true;
-      public bool isGrounded = false;
 
     public Rigidbody2D rb;
     public LayerMask groundLayer;
-    public Transform groundCheckCollider;
-
+    public Transform groundCheck;
 
     Animator animator;
 
     void Start(){
         animator = GetComponent<Animator>();
-    }
-
-    void FixedUpdate(){
-        GroundCheck();
-
     }
 
     // Update is called once per frame
@@ -34,7 +27,6 @@ public class Movement_P1 : MonoBehaviour
         animator.SetFloat("yVelocity", rb.velocity.y);
 
         Flip();
-
     }
 
     private void Flip()
@@ -48,16 +40,9 @@ public class Movement_P1 : MonoBehaviour
         }
     }
 
-     void GroundCheck()
+    private bool isGrounded()
     {
-        isGrounded=false;
-        Collider2D[] colliders=Physics2D.OverlapCircleAll(groundCheckCollider.position, 0.2f, groundLayer);
-        if(colliders.Length > 0){
-            isGrounded= true;
-        }
-        else{
-            isGrounded= false;
-        }
+        return Physics2D.OverlapBox(groundCheck.position, new Vector2(0.5f, 0.1f), 0f, groundLayer);
     }
 
     public void Move(InputAction.CallbackContext context)
@@ -67,7 +52,7 @@ public class Movement_P1 : MonoBehaviour
 
     public void Jump(InputAction.CallbackContext context)
     {
-        if (context.performed && isGrounded)
+        if (context.performed && isGrounded())
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpPower);
             animator.SetBool("isJumping", true);
