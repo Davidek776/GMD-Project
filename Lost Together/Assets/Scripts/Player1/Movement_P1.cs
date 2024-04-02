@@ -48,7 +48,7 @@ public class Movement_P1 : MonoBehaviour
         }
     }
 
-    private void GroundCheck()
+     void GroundCheck()
     {
         isGrounded=false;
         Collider2D[] colliders=Physics2D.OverlapCircleAll(groundCheckCollider.position, 0.2f, groundLayer);
