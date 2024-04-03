@@ -6,7 +6,7 @@ public class HorizontalMovement : ISwitchable
     private bool isActive;
     private Coroutine movementCoroutine;
 
-    public float horizontalOffset = 1f; // Change this value according to the desired horizontal movement
+    public float horizontalOffset = 1f; 
 
     private Vector3 originalPosition;
 
