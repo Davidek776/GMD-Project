@@ -23,13 +23,13 @@ public class Respawn : MonoBehaviour
         }
         else if (collision.CompareTag("Spike"))
         {
+            animator.SetBool("isDead", true);
             Die(0.5f);
         }
     }
 
     private void Die(float respawnDuration)
     {
-        animator.SetBool("isDead", true);
         Debug.Log("Is dead: " + animator.GetBool("isDead"));
         StartCoroutine(RespawnPlayer(respawnDuration));
     }
