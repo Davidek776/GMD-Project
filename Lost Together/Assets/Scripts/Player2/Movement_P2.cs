@@ -63,7 +63,7 @@ public class Movement_P2 : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Ground")
+        if (collision.gameObject.layer == 6)
         {
             animator.SetBool("isJumping", false);
         }
