@@ -4,47 +4,51 @@ using UnityEngine;
 public class VerticalMovement : ISwitchable
 {
     private bool isActive;
-    private Coroutine activationCoroutine;
-    private Coroutine deactivationCoroutine;
+    private Coroutine movementCoroutine;
 
-    public float verticalOffset = 0.3f;
+    public float verticalOffset = 1f; 
+
+    private Vector3 originalPosition;
 
     public override bool IsActive => isActive;
 
+    private void Start()
+    {
+        originalPosition = transform.position;
+    }
+
     public override void Activate()
     {
-        if (deactivationCoroutine != null)
-            StopCoroutine(deactivationCoroutine);
-
-        isActive = true;
-        activationCoroutine = StartCoroutine(ChangeScaleOverTime(Vector3.Scale(transform.localScale, new Vector3(1f, verticalOffset, 1f))));
+        if (!isActive)
+        {
+            isActive = true;
+            movementCoroutine = StartCoroutine(MoveOverTime(originalPosition + new Vector3(0f, verticalOffset, 0f)));
+        }
     }
 
     public override void Deactivate()
     {
-        if (activationCoroutine != null)
-            StopCoroutine(activationCoroutine);
-
-        deactivationCoroutine = StartCoroutine(ChangeScaleOverTime(Vector3.one));
+        if (isActive)
+        {
+            isActive = false;
+            movementCoroutine = StartCoroutine(MoveOverTime(originalPosition));
+        }
     }
 
-    private IEnumerator ChangeScaleOverTime(Vector3 targetScale)
+    private IEnumerator MoveOverTime(Vector3 targetPosition)
     {
         float elapsedTime = 0f;
-        Vector3 initialScale = transform.localScale;
+        Vector3 initialPosition = transform.position;
         float duration = 1f;
 
         while (elapsedTime < duration)
         {
             elapsedTime += Time.deltaTime;
             float t = Mathf.Clamp01(elapsedTime / duration);
-            transform.localScale = Vector3.Lerp(initialScale, targetScale, t);
+            transform.position = Vector3.Lerp(initialPosition, targetPosition, t);
             yield return null;
         }
 
-        transform.localScale = targetScale;
-
-        if (targetScale == Vector3.one)
-            isActive = false;
+        transform.position = targetPosition;
     }
 }
