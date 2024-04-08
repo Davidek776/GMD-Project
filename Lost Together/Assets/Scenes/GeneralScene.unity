@@ -5080,7 +5080,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c527fade9dd934700975716ee936d2b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  verticalOffset: -0.3
+  verticalOffset: -0.7
 --- !u!4 &823807447
 Transform:
   m_ObjectHideFlags: 0
@@ -6201,7 +6201,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 315285e1c597d411b9251a739f0db13b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buttonPressedOffset: 0.4
+  buttonPressedOffset: 0.1
   playerCollider: {fileID: 271539872674072576}
   client: {fileID: 823807446}
 --- !u!1 &1013579698
@@ -11853,7 +11853,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 633453261491106357, guid: 74791bca9c0804b2c94e7ab64c5e6c9b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.12
+      value: 0.02
       objectReference: {fileID: 0}
     - target: {fileID: 633453261491106357, guid: 74791bca9c0804b2c94e7ab64c5e6c9b, type: 3}
       propertyPath: m_LocalPosition.z
@@ -13423,6 +13423,10 @@ PrefabInstance:
     - target: {fileID: 6613401377222949453, guid: 57124c03d06d345f0b61b7ffdd0b9b16, type: 3}
       propertyPath: m_Name
       value: Platforms_9
+      objectReference: {fileID: 0}
+    - target: {fileID: 6613401377222949453, guid: 57124c03d06d345f0b61b7ffdd0b9b16, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
