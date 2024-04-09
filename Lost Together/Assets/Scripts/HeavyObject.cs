@@ -49,7 +49,7 @@ public class HeavyObject : MonoBehaviour
     else
     {
         Debug.Log("Other object exited collision: " + collision.gameObject.tag);
-                isColliding=false;
+                // isColliding=false;
 
 
 
