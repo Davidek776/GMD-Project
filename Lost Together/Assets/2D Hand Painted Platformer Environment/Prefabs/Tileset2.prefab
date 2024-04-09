@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2088537188802109529}
   - component: {fileID: 6695136763864925034}
   - component: {fileID: -1802679886800811711}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Tileset2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
