@@ -26,41 +26,21 @@ public class HeavyObject : MonoBehaviour
 
     private void OnCollisionExit2D(Collision2D collision)
     {
-       
-
         if (collision.gameObject.CompareTag("Player1") || collision.gameObject.CompareTag("Player2"))
     {
         rb.bodyType = RigidbodyType2D.Static;
-        Debug.Log("HERE");
         isColliding=false;
-
-
     }
 
     if (collision.gameObject.CompareTag("Ground"))
     {
         rb.bodyType = RigidbodyType2D.Dynamic;
-        Debug.Log("FALLING ++++++++++");
-               isColliding=false;
-
-
-
+        isColliding=false;
     }
-    else
-    {
-        Debug.Log("Other object exited collision: " + collision.gameObject.tag);
-                // isColliding=false;
-
-
-
-    }
-        // Debug.Log(collisionCount);
-
+    
      if (isColliding==false)
         {
             rb.bodyType = RigidbodyType2D.Dynamic;
-             Debug.Log("YES");
-
         }
     }
 
