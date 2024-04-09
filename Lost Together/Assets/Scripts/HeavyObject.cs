@@ -5,36 +5,57 @@ using UnityEngine;
 public class HeavyObject : MonoBehaviour
 {
     private Rigidbody2D rb;
-    public LayerMask groundLayer;
+    private HashSet<Collider2D> collidersInContact = new HashSet<Collider2D>();
 
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
     }
 
-    private void Update()
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (rb.bodyType == RigidbodyType2D.Dynamic)
-            rb.velocity = new Vector2(0, 0);
+        if (collision.gameObject.CompareTag("Player2") )
+        {
+             rb.bodyType = RigidbodyType2D.Static;
+        }
+
+        if (collision.gameObject.CompareTag("Player1") )
+        {
+             rb.bodyType = RigidbodyType2D.Dynamic;
+        }
+        // else{
+        //      rb.bodyType = RigidbodyType2D.Dynamic;
+
+        // }
     }
 
     private void OnCollisionStay2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Player1")
-        {
-            rb.bodyType = RigidbodyType2D.Dynamic;
-        }
-        else if (collision.gameObject.tag != "Ground")
+        if (collision.gameObject.CompareTag("Player2"))
         {
             rb.bodyType = RigidbodyType2D.Static;
         }
+         if (collision.gameObject.CompareTag("Player1") )
+        {
+             rb.bodyType = RigidbodyType2D.Dynamic;
+        }
+        // else{
+        //      rb.bodyType = RigidbodyType2D.Dynamic;
+        // }
     }
 
-    private void OnCollisionExit2D(Collision2D collision)
+  private void OnCollisionExit2D(Collision2D collision)
+{
+    if (collision.gameObject.CompareTag("Player1") || collision.gameObject.CompareTag("Player2"))
     {
-        if (collision.gameObject.tag != "Ground")
-        {
-            rb.bodyType = RigidbodyType2D.Static;
-        }
+        rb.bodyType = RigidbodyType2D.Static;
+        Debug.Log("HERE");
+
     }
+    else
+    {
+        Debug.Log("Other object exited collision: " + collision.gameObject.name);
+    }
+}
+
 }
