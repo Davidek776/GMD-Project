@@ -5,7 +5,8 @@ using UnityEngine;
 public class HeavyObject : MonoBehaviour
 {
     private Rigidbody2D rb;
-    private HashSet<Collider2D> collidersInContact = new HashSet<Collider2D>();
+    private int collisionCount = 0;
+    private bool isColliding = false;
 
     private void Start()
     {
@@ -14,48 +15,67 @@ public class HeavyObject : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Player2") )
-        {
-             rb.bodyType = RigidbodyType2D.Static;
-        }
-
-        if (collision.gameObject.CompareTag("Player1") )
-        {
-             rb.bodyType = RigidbodyType2D.Dynamic;
-        }
-        // else{
-        //      rb.bodyType = RigidbodyType2D.Dynamic;
-
-        // }
+        HandleCollision(collision);
     }
 
     private void OnCollisionStay2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Player2"))
-        {
-            rb.bodyType = RigidbodyType2D.Static;
-        }
-         if (collision.gameObject.CompareTag("Player1") )
-        {
-             rb.bodyType = RigidbodyType2D.Dynamic;
-        }
-        // else{
-        //      rb.bodyType = RigidbodyType2D.Dynamic;
-        // }
+        HandleCollision(collision);
+        collisionCount++;
     }
 
-  private void OnCollisionExit2D(Collision2D collision)
-{
-    if (collision.gameObject.CompareTag("Player1") || collision.gameObject.CompareTag("Player2"))
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+       
+
+        if (collision.gameObject.CompareTag("Player1") || collision.gameObject.CompareTag("Player2"))
     {
         rb.bodyType = RigidbodyType2D.Static;
         Debug.Log("HERE");
+        isColliding=false;
+
+
+    }
+
+    if (collision.gameObject.CompareTag("Ground"))
+    {
+        rb.bodyType = RigidbodyType2D.Dynamic;
+        Debug.Log("FALLING ++++++++++");
+               isColliding=false;
+
+
 
     }
     else
     {
-        Debug.Log("Other object exited collision: " + collision.gameObject.name);
-    }
-}
+        Debug.Log("Other object exited collision: " + collision.gameObject.tag);
+                isColliding=false;
 
+
+
+    }
+        // Debug.Log(collisionCount);
+
+     if (isColliding==false)
+        {
+            rb.bodyType = RigidbodyType2D.Dynamic;
+             Debug.Log("YES");
+
+        }
+    }
+
+    private void HandleCollision(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player2"))
+        {
+            rb.bodyType = RigidbodyType2D.Static;
+            isColliding=true;
+        }
+        if (collision.gameObject.CompareTag("Player1"))
+        {
+            rb.bodyType = RigidbodyType2D.Dynamic;
+            isColliding=true;
+        }
+
+    }
 }
