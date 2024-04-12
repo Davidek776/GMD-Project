@@ -7,6 +7,7 @@ public class Respawn : MonoBehaviour
 
     private Vector2 startPos;
     private Animator animator;
+    public bool canMove = true;
 
     // Start is called before the first frame update
     void Start()
@@ -30,7 +31,8 @@ public class Respawn : MonoBehaviour
 
     private void Die(float respawnDuration)
     {
-        Debug.Log("Is dead: " + animator.GetBool("isDead"));
+        canMove = false;
+        Debug.Log("Player cannot move");
         StartCoroutine(RespawnPlayer(respawnDuration));
     }
 
@@ -38,7 +40,8 @@ public class Respawn : MonoBehaviour
     {
         yield return new WaitForSeconds(duration);
         animator.SetBool("isDead", false);
-        Debug.Log("Is dead: " + animator.GetBool("isDead"));
         transform.position = startPos;
+        canMove = true;
+        Debug.Log("Player can move now");
     }
 }
