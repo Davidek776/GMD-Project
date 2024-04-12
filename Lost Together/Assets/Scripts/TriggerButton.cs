@@ -60,7 +60,6 @@ public class TriggerButton : MonoBehaviour
 
    private void OnTriggerExit2D(Collider2D collision){
     if(collision.gameObject == playerCollider){
-        // Activate the game object before starting the coroutine
         gameObject.SetActive(true);
         StartCoroutine(SwitchUpDelay(switchDelay));
     }
