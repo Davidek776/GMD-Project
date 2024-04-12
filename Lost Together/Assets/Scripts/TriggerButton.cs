@@ -45,7 +45,7 @@ public class TriggerButton : MonoBehaviour
       void MoveSwitchUp(){
         if(transform.position!=switchUpPos){
             transform.position=Vector3.MoveTowards(transform.position, switchUpPos,switchSpeed*Time.deltaTime);
-        // Debug.Log(client.IsActive);
+        // Debug.Log(isPressingSwitch);
         }
     }
 
@@ -61,14 +61,6 @@ public class TriggerButton : MonoBehaviour
 
         if(collision.gameObject == playerCollider){
             isPressingSwitch=true;
-            
-            // if(isDoorOpenSwitch && !client.IsActive()){
-            //     client.Deactivate();
-            // }
-            // else if(isDoorCloseSwitch && client.IsActive()){
-            //     client.Activate();
-            // }
-
             }
         }
 
