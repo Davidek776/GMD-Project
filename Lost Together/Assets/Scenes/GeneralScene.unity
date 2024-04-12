@@ -6358,6 +6358,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 767479654556761950, guid: e04148313dc06422a94456d0088a4545, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 767479654556761950, guid: e04148313dc06422a94456d0088a4545, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5156755901875809046, guid: e04148313dc06422a94456d0088a4545, type: 3}
       propertyPath: client
       value: 
@@ -6365,7 +6373,7 @@ PrefabInstance:
     - target: {fileID: 5156755901875809046, guid: e04148313dc06422a94456d0088a4545, type: 3}
       propertyPath: playerCollider
       value: 
-      objectReference: {fileID: 71545317}
+      objectReference: {fileID: 992133990}
     - target: {fileID: 5156755901875809046, guid: e04148313dc06422a94456d0088a4545, type: 3}
       propertyPath: isDoorOpenSwitch
       value: 1
@@ -6380,7 +6388,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5702534807213007143, guid: e04148313dc06422a94456d0088a4545, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.166
+      value: -0.145
       objectReference: {fileID: 0}
     - target: {fileID: 5702534807213007143, guid: e04148313dc06422a94456d0088a4545, type: 3}
       propertyPath: m_LocalPosition.z
@@ -6415,12 +6423,20 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7253957544948358272, guid: e04148313dc06422a94456d0088a4545, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7253957544948358272, guid: e04148313dc06422a94456d0088a4545, type: 3}
       propertyPath: m_Offset.y
       value: 0.1
       objectReference: {fileID: 0}
+    - target: {fileID: 7253957544948358272, guid: e04148313dc06422a94456d0088a4545, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8645219867293833213, guid: e04148313dc06422a94456d0088a4545, type: 3}
       propertyPath: m_Name
-      value: Mushrooms_0 (1)
+      value: NewTriggerButton
       objectReference: {fileID: 0}
     - target: {fileID: 8645219867293833213, guid: e04148313dc06422a94456d0088a4545, type: 3}
       propertyPath: m_Layer

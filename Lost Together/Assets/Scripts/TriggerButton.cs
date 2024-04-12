@@ -36,7 +36,7 @@ public class TriggerButton : MonoBehaviour
     void MoveSwitchDown(){
         if(transform.position!=switchDownPos){
             transform.position=Vector3.MoveTowards(transform.position, switchDownPos,switchSpeed*Time.deltaTime);
-        Debug.Log(isPressingSwitch);
+        // Debug.Log(isPressingSwitch);
 
 
         }
@@ -45,7 +45,7 @@ public class TriggerButton : MonoBehaviour
       void MoveSwitchUp(){
         if(transform.position!=switchUpPos){
             transform.position=Vector3.MoveTowards(transform.position, switchUpPos,switchSpeed*Time.deltaTime);
-        Debug.Log(isPressingSwitch);
+        // Debug.Log(client.IsActive);
         }
     }
 
@@ -53,7 +53,7 @@ public class TriggerButton : MonoBehaviour
 
         if(collision.gameObject == playerCollider){
             isPressingSwitch=true;
-                client.Activate();
+            client.Activate();
             }
         }
 
@@ -61,6 +61,7 @@ public class TriggerButton : MonoBehaviour
 
         if(collision.gameObject == playerCollider){
             isPressingSwitch=true;
+            
             // if(isDoorOpenSwitch && !client.IsActive()){
             //     client.Deactivate();
             // }
@@ -77,10 +78,11 @@ public class TriggerButton : MonoBehaviour
         }
     }
 
-    IEnumerator SwitchUpDelay(float waitTime){
-        yield return new WaitForSeconds(waitTime);
-        isPressingSwitch=false;
-        client.Deactivate();
-    }
+   IEnumerator SwitchUpDelay(float waitTime){
+    yield return new WaitForSeconds(waitTime);
+    isPressingSwitch=false;
+    client.Deactivate();
+}
+
 }
 
