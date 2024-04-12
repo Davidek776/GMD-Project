@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Respawn : MonoBehaviour
@@ -32,16 +31,14 @@ public class Respawn : MonoBehaviour
     private void Die(float respawnDuration)
     {
         canMove = false;
-        Debug.Log("Player cannot move");
         StartCoroutine(RespawnPlayer(respawnDuration));
     }
 
-    IEnumerator RespawnPlayer(float duration = 0)
+    private IEnumerator RespawnPlayer(float duration = 0)
     {
         yield return new WaitForSeconds(duration);
         animator.SetBool("isDead", false);
         transform.position = startPos;
         canMove = true;
-        Debug.Log("Player can move now");
     }
 }
