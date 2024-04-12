@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1620463192569596764}
   - component: {fileID: 5715075209714590626}
   - component: {fileID: 4943006143075005680}
+  - component: {fileID: 8088755532368882485}
   m_Layer: 6
   m_Name: Mushrooms_0
   m_TagString: Untagged
@@ -175,8 +176,8 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.23, y: 0.28}
-  m_EdgeRadius: 0.25
+  m_Size: {x: 0.63, y: 0.75}
+  m_EdgeRadius: 0
 --- !u!114 &4943006143075005680
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -191,5 +192,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerCollider: {fileID: 0}
   client: {fileID: 0}
-  isDoorOpenSwitch: 0
-  isDoorCloseSwitch: 0
+--- !u!114 &8088755532368882485
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4971908202799710598}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6fd608228b9624d20bbf4b80aef652af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  newColor: {r: 0.20572266, g: 0.26625216, b: 0.6509434, a: 0}

@@ -7,8 +7,6 @@ public class TriggerButton : MonoBehaviour
     public GameObject playerCollider;
 
     [SerializeField] private ISwitchable client;
-    [SerializeField] private bool isDoorOpenSwitch;
-    [SerializeField] private bool isDoorCloseSwitch;
 
     private float switchSizeY;
     private Vector3 switchUpPos;
@@ -36,16 +34,12 @@ public class TriggerButton : MonoBehaviour
     void MoveSwitchDown(){
         if(transform.position!=switchDownPos){
             transform.position=Vector3.MoveTowards(transform.position, switchDownPos,switchSpeed*Time.deltaTime);
-        // Debug.Log(isPressingSwitch);
-
-
         }
     }
 
       void MoveSwitchUp(){
         if(transform.position!=switchUpPos){
             transform.position=Vector3.MoveTowards(transform.position, switchUpPos,switchSpeed*Time.deltaTime);
-        // Debug.Log(isPressingSwitch);
         }
     }
 
@@ -64,11 +58,14 @@ public class TriggerButton : MonoBehaviour
             }
         }
 
-    private void OnTriggerExit2D(Collider2D collision){
-        if(collision.gameObject == playerCollider){
-            StartCoroutine(SwitchUpDelay(switchDelay));
-        }
+   private void OnTriggerExit2D(Collider2D collision){
+    if(collision.gameObject == playerCollider){
+        // Activate the game object before starting the coroutine
+        gameObject.SetActive(true);
+        StartCoroutine(SwitchUpDelay(switchDelay));
     }
+}
+
 
    IEnumerator SwitchUpDelay(float waitTime){
     yield return new WaitForSeconds(waitTime);
