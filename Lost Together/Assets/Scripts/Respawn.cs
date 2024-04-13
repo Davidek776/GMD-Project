@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Respawn : MonoBehaviour
@@ -7,6 +6,7 @@ public class Respawn : MonoBehaviour
 
     private Vector2 startPos;
     private Animator animator;
+    public bool canMove = true;
 
     // Start is called before the first frame update
     void Start()
@@ -30,15 +30,15 @@ public class Respawn : MonoBehaviour
 
     private void Die(float respawnDuration)
     {
-        Debug.Log("Is dead: " + animator.GetBool("isDead"));
+        canMove = false;
         StartCoroutine(RespawnPlayer(respawnDuration));
     }
 
-    IEnumerator RespawnPlayer(float duration = 0)
+    private IEnumerator RespawnPlayer(float duration = 0)
     {
         yield return new WaitForSeconds(duration);
         animator.SetBool("isDead", false);
-        Debug.Log("Is dead: " + animator.GetBool("isDead"));
         transform.position = startPos;
+        canMove = true;
     }
 }
