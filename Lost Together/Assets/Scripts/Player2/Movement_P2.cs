@@ -13,17 +13,23 @@ public class Movement_P2 : MonoBehaviour
     public LayerMask groundLayer;
     public Transform groundCheck;
 
-    Animator animator;
+    private Animator animator;
+    private Respawn respawn;
 
     void Start()
     {
         animator = GetComponent<Animator>();
+        respawn = GetComponent<Respawn>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        rb.velocity = new Vector2(horizontalInput * speed, rb.velocity.y);
+        if (respawn.canMove)
+            rb.velocity = new Vector2(horizontalInput * speed, rb.velocity.y);
+        else
+            rb.velocity = new Vector2(0, rb.velocity.y);
+
         animator.SetFloat("xVelocity", Math.Abs(rb.velocity.x));
         animator.SetFloat("yVelocity", rb.velocity.y);
 
@@ -54,7 +60,7 @@ public class Movement_P2 : MonoBehaviour
 
     public void Jump(InputAction.CallbackContext context)
     {
-        if (context.performed && isGrounded())
+        if (respawn.canMove && context.performed && isGrounded())
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpPower);
             animator.SetBool("isJumping", true);
