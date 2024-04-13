@@ -4,72 +4,73 @@ using UnityEngine;
 
 public class TriggerButton : MonoBehaviour
 {
-    public float buttonPressedOffset = 0.4f;
     public GameObject playerCollider;
 
     [SerializeField] private ISwitchable client;
 
-    private Vector3 buttonPressedPosition;
-    private Vector3 initialButtonPosition;
-    private bool isPressed = false;
-    private bool isDelayFinished = false;
+    private float switchSizeY;
+    private Vector3 switchUpPos;
+    private Vector3 switchDownPos;
+    private float switchSpeed=1f;
+    private float switchDelay=0.2f;
+    private bool isPressingSwitch = false;
 
-    void Start()
-    {
-        initialButtonPosition = transform.position;
-        buttonPressedPosition = initialButtonPosition - new Vector3(0f, buttonPressedOffset, 0f);
+
+    void Awake(){
+        switchSizeY=transform.localScale.y / 10;
+        switchUpPos=transform.position;
+        switchDownPos=new Vector3(transform.position.x,transform.position.y-switchSizeY,transform.position.z);
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if ((collision.gameObject == playerCollider) && !isPressed)
-        {
-            StartCoroutine(MoveButtonDownWithDelay());
-            isPressed = true;
+    void Update(){
+        if(isPressingSwitch){
+            MoveSwitchDown();
+        }
+        else if(!isPressingSwitch){
+            MoveSwitchUp();
         }
     }
 
-    private void OnCollisionExit2D(Collision2D collision)
-    {
-        if (collision.gameObject == playerCollider)
-        {
-            isPressed = false;
-            if (isDelayFinished == true)
-            {
-                MoveButtonUp();
+    void MoveSwitchDown(){
+        if(transform.position!=switchDownPos){
+            transform.position=Vector3.MoveTowards(transform.position, switchDownPos,switchSpeed*Time.deltaTime);
+        }
+    }
+
+      void MoveSwitchUp(){
+        if(transform.position!=switchUpPos){
+            transform.position=Vector3.MoveTowards(transform.position, switchUpPos,switchSpeed*Time.deltaTime);
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision){
+
+        if(collision.gameObject == playerCollider){
+            isPressingSwitch=true;
+            client.Activate();
             }
         }
-    }
 
-    private IEnumerator MoveButtonDownWithDelay()
-    {
-        transform.position = buttonPressedPosition;
+      private void OnTriggerStay2D(Collider2D collision){
 
-        if (client != null)
-        {
-            client.Activate();
+        if(collision.gameObject == playerCollider){
+            isPressingSwitch=true;
+            }
         }
 
-
-        isDelayFinished = false;
-
-        yield return new WaitForSeconds(0.2f);
-
-        isDelayFinished = true;
-
-        if (!isPressed)
-        {
-            MoveButtonUp();
-        }
-    }
-
-    private void MoveButtonUp()
-    {
-        transform.position = initialButtonPosition;
-        if (client != null)
-        {
-            client.Deactivate();
-
-        }
+   private void OnTriggerExit2D(Collider2D collision){
+    if(collision.gameObject == playerCollider){
+        gameObject.SetActive(true);
+        StartCoroutine(SwitchUpDelay(switchDelay));
     }
 }
+
+
+   IEnumerator SwitchUpDelay(float waitTime){
+    yield return new WaitForSeconds(waitTime);
+    isPressingSwitch=false;
+    client.Deactivate();
+}
+
+}
+

@@ -21,8 +21,9 @@ public class HorizontalMovement : ISwitchable
     {
         if (!isActive)
         {
-            isActive = true;
             movementCoroutine = StartCoroutine(MoveOverTime(originalPosition + new Vector3(horizontalOffset, 0f, 0f)));
+            isActive = true;
+
         }
     }
 
@@ -30,8 +31,8 @@ public class HorizontalMovement : ISwitchable
     {
         if (isActive)
         {
-            isActive = false;
             movementCoroutine = StartCoroutine(MoveOverTime(originalPosition));
+            isActive = false;
         }
     }
 
