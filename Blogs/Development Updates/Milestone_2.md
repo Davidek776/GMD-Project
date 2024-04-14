@@ -14,3 +14,9 @@ Triggers are buttons positioned on the ground and can be pressed by the player t
 
 <img width="620" alt="Main menu" src="../Screenshots/Trigger_bridge.png"> 
 
+### Collaboration logic
+One of the main challanges in the game, that players have to overcome is to go through the world, where are some obstacles. From time to time there are obstacles, which one player can not overcome alone and therefore neeeds help of other player. This sort of the collaboration between players makes this game fun, challenging and brings to player together. Purpose of obstacles, which require colaboration is also to make gamers think about how to overcome certain obstacle. In the picture below can be seen example of collaboration.
+
+<img width="620" alt="Main menu" src="../Screenshots/Colaboration_Elevator.png"> 
+
+
