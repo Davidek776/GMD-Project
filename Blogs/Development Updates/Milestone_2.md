@@ -29,3 +29,4 @@ We manages to find a package of character sprites online that we really liked an
 ### Animations
 So far we only implemented character animations. Since we already had the basic animations, it was mostly playing with the animator and trying to figure out the logic of the animations, how should they interrupt each other in different scenarios etc. There are still some issues with the animations we would like to fix, for example, we have a small delay after jumping when the character is in idle animation when running before it switches to running animation again, we suspect that there is a problem with an interrupt and want to fix that in the early stage of the upcoming development.
 
+![Animations gif](../gifs/Animations-ezgif.com-optimize.gif)
