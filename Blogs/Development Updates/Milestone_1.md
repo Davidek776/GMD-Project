@@ -1,4 +1,4 @@
-# Game Development Blog posts - Lost Together
+# Game Development Blog post #1 - Lost Together
 
 ## Dev Update 1
 First milestone for this project is on 17th March. Goal of this milestone was to create Character controllers, Obstacles, Menu and Split Screen.
