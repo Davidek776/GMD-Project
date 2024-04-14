@@ -5,4 +5,12 @@ The second milestone for this project is on 14th April. The goal of this milesto
 
 ### Environment
 For the game environment was used asset from Unity Asset Store which is accessible here: https://assetstore.unity.com/packages/2d/environments/2d-hand-painted-platformer-environment-227159. This asset was chosen, because its aesthetics and possibilities match our expectations that were described in Design Document. The asset consists of multiple layers and has a parallax effect. Thanks to the perspective camera it gives the player a sense of depth because it shows each layer on different positions on Z-axis. Moreover, the asset has leaves particle system that adds a more dynamic pattern to the game.
+
 <img width="620" alt="Main menu" src="../Screenshots/Game_Environment.png"> 
+
+### Triggers
+Triggers are buttons positioned on the ground and can be pressed by the player to activate or deactivate a game object. Therefore each trigger has a serialized field, where you choose which player can press the trigger and it has also a field where you choose which game object is interacting with the trigger. The implementation of triggers and scripts that are used for the behavior of game objects that are interacting with triggers uses the Dependency Inversion Principle. There is an abstract class ISwitchable that has Activate and Deactivate methods. Currently, we have two classes that are implementing ISwitchable. Those are VerticalMovement and HorizontalMovement. Each of them has different functionality. Thanks to this implementation when the trigger is added to the scene it can be associated with any client(game object) that contains a script that is implementing ISwitchable. In the picture below can be seen trigger that is reacting to only one of the players and is activating the bridge that is using the horizontalMovement class which is implementing the ISwitchable abstract class.
+
+
+<img width="620" alt="Main menu" src="../Screenshots/Trigger_bridge.png"> 
+
