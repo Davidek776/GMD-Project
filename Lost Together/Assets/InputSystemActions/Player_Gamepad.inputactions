@@ -1,0 +1,54 @@
+{
+    "name": "Player_Gamepad",
+    "maps": [
+        {
+            "name": "Movement",
+            "id": "d7d46701-f1ac-4ad3-83c2-61b4d4e8827c",
+            "actions": [
+                {
+                    "name": "Move",
+                    "type": "Value",
+                    "id": "aecfc60a-31b0-413d-9a50-6c320b0a42fa",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "Jump",
+                    "type": "Button",
+                    "id": "db6a788d-8e72-41a0-a0bb-3e6a629d2014",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "760745be-76eb-41e6-989c-cea4674aaca5",
+                    "path": "<Gamepad>/leftStick",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "0970be8c-02d8-430a-9eb1-9e5c17ff2cd3",
+                    "path": "<Gamepad>/buttonSouth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Jump",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
