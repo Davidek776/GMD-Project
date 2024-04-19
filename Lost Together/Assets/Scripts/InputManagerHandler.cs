@@ -7,7 +7,7 @@ public class InputManagerHandler : MonoBehaviour
 {
     //Player input manager
     private PlayerInputManager playerInputManager;
-    private GameObject playerPrefab2;
+    public GameObject playerPrefab2;
 
     // Start is called before the first frame update
     void Start()
@@ -18,7 +18,7 @@ public class InputManagerHandler : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(GameObject.Find("Player1") != null)
+        if(GameObject.FindWithTag("Player1") != null)
         {
             playerInputManager.playerPrefab = playerPrefab2;
         }
