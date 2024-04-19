@@ -21,12 +21,13 @@ public class PlayerInputHandler : MonoBehaviour
     public void Move(InputAction.CallbackContext context)
     {
         var horizontalInput = context.ReadValue<Vector2>().x;
-        movementController.SetHorizontalInput(horizontalInput);
+        if(movementController != null)
+            movementController.SetHorizontalInput(horizontalInput);
     }
 
     public void Jump(InputAction.CallbackContext context)
     {
-        if (context.performed)
+        if (context.performed && movementController != null)
         {
             movementController.Jump();
         }

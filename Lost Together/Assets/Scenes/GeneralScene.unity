@@ -3919,6 +3919,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1417829118}
     m_Modifications:
+    - target: {fileID: 1620463192569596764, guid: 8dac885f54e794f158945af83aa37306, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 15d5fa51bca4c4e9a98ccf304823821b, type: 2}
     - target: {fileID: 4943006143075005680, guid: 8dac885f54e794f158945af83aa37306, type: 3}
       propertyPath: client
       value: 
@@ -3931,6 +3935,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TriggerButton
       objectReference: {fileID: 0}
+    - target: {fileID: 5715075209714590626, guid: 8dac885f54e794f158945af83aa37306, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 15d5fa51bca4c4e9a98ccf304823821b, type: 2}
     - target: {fileID: 7811722719603327158, guid: 8dac885f54e794f158945af83aa37306, type: 3}
       propertyPath: m_LocalPosition.x
       value: -190.4219
