@@ -5,7 +5,7 @@ using UnityEngine.InputSystem;
 public class ControlsHint : MonoBehaviour
 {
     public GameObject controlsHint;
-    private float horizontalInput;
+    public bool hintDisabled = false;
 
     // Start is called before the first frame update
     void Start()
@@ -13,17 +13,9 @@ public class ControlsHint : MonoBehaviour
         controlsHint.SetActive(true);
     }
 
-    // Update is called once per frame
-    void Update()
+    public void DisableHint()
     {
-        if (horizontalInput != 0 && controlsHint.activeSelf)
-        {
-            controlsHint.SetActive(false);
-        }
-    }
-
-    public void DisableHint(InputAction.CallbackContext context)
-    {
-        horizontalInput = context.ReadValue<Vector2>().x;
+        controlsHint.SetActive(false);
+        hintDisabled = true;
     }
 }
