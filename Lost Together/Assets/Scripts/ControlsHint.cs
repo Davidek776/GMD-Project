@@ -19,7 +19,6 @@ public class ControlsHint : MonoBehaviour
         if (horizontalInput != 0 && controlsHint.activeSelf)
         {
             controlsHint.SetActive(false);
-            Debug.Log("Controls hint disabled");
         }
     }
 
