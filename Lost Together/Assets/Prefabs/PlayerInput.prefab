@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8838232380057670695}
   - component: {fileID: 3507843284587032605}
   - component: {fileID: 1062919008045847207}
+  - component: {fileID: -7987617808882912549}
   m_Layer: 0
   m_Name: PlayerInput
   m_TagString: Untagged
@@ -90,6 +91,22 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: db6a788d-8e72-41a0-a0bb-3e6a629d2014
     m_ActionName: Movement/Jump
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: -7987617808882912549}
+        m_TargetAssemblyTypeName: MenuInputHandler, Assembly-CSharp
+        m_MethodName: HandleOpenCloseMenu
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 222f2ed6-6c29-4c17-85fa-010cae7775ba
+    m_ActionName: Movement/MenuOpen[/DualShock4GamepadHID/start,/Keyboard/escape]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Movement
@@ -105,5 +122,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f2bd8bf8905d641ff9ca877d5947ea0f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &-7987617808882912549
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3218518207922037064}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2b8e7052d2ad42b5b89dd03bae71c61, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

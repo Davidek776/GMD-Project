@@ -1,4 +1,6 @@
+using UnityEditor.ShaderGraph.Internal;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour
@@ -8,6 +10,8 @@ public class PauseMenu : MonoBehaviour
     [SerializeField]
     private GameObject pauseMenu;
     [SerializeField]
+    private GameObject firstButton;
+    [SerializeField]
     private GameObject player1;
     [SerializeField]
     private GameObject player2;
@@ -16,21 +20,7 @@ public class PauseMenu : MonoBehaviour
     {
         pauseMenu.SetActive(false);
     }
-    // Update is called once per frame
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            if (isGamePaused)
-            {
-                ResumeGame();
-            }
-            else
-            {
-                PauseGame();
-            }
-        }
-    }
+
     public void ResumeGame()
     {
         pauseMenu.SetActive(false);
@@ -41,9 +31,11 @@ public class PauseMenu : MonoBehaviour
         player2.GetComponent<MovementController>().enabled = true;
     }
 
-    void PauseGame()
+    public void PauseGame()
     {
         pauseMenu.SetActive(true);
+        EventSystem.current.SetSelectedGameObject(null);
+        EventSystem.current.SetSelectedGameObject(firstButton);
         Time.timeScale = 0f;
         isGamePaused = true;
 
