@@ -9,6 +9,8 @@ TagManager:
   - Ground
   - DeadZone
   - Spike
+  - Player2ControlsHint
+  - Player1ControlsHint
   layers:
   - Default
   - TransparentFX
