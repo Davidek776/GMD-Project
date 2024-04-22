@@ -17,12 +17,14 @@ public class MovementController : MonoBehaviour
     private Animator animator;
     
     private Respawn respawn;
+    private ControlsHint controlsHint;
     public int playerIndex = 0;
 
     void Start(){
         animator = GetComponent<Animator>();
         respawn = GetComponent<Respawn>();
         rb = GetComponent<Rigidbody2D>();
+        controlsHint = GetComponent<ControlsHint>();
 
         if (gameObject.CompareTag("Player1"))
             jumpPower = 8.0f;
@@ -63,6 +65,9 @@ public class MovementController : MonoBehaviour
     public void SetHorizontalInput(float input)
     {
         horizontalInput = input;
+
+        if(!controlsHint.hintDisabled && input != 0)
+            controlsHint.DisableHint();
     }
 
     public void Jump()
