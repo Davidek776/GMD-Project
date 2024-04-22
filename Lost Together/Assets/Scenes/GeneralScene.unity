@@ -6419,7 +6419,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4c9aaa0844b640748fc2d364894e83d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 1299590777}
+  target: {fileID: 125467702}
   smoothSpeed: 0.125
 --- !u!114 &836494737
 MonoBehaviour:
@@ -8208,7 +8208,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4c9aaa0844b640748fc2d364894e83d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 324312083}
+  target: {fileID: 606399236}
   smoothSpeed: 0.25
 --- !u!114 &1024478133
 MonoBehaviour:

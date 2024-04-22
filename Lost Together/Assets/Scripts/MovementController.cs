@@ -70,6 +70,11 @@ public class MovementController : MonoBehaviour
             controlsHint.DisableHint();
     }
 
+    public float GetHorizontalInput()
+    {
+        return horizontalInput;
+    }
+
     public void Jump()
     {
         if (respawn.canMove && isGrounded())
@@ -91,4 +96,9 @@ public class MovementController : MonoBehaviour
     {
         return playerIndex;
     } 
+
+    public bool IsFacingRight()
+    {
+        return isFacingRight;
+    }
 }
