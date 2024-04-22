@@ -9,6 +9,7 @@ public class MovementController : MonoBehaviour
     private float horizontalInput;
     private float jumpPower;
     private bool isFacingRight = true;
+    private bool jumpCanceled = true;
 
     private Rigidbody2D rb;
     public LayerMask groundLayer;
@@ -42,6 +43,10 @@ public class MovementController : MonoBehaviour
 
         animator.SetFloat("xVelocity", Math.Abs(rb.velocity.x));
         animator.SetFloat("yVelocity", rb.velocity.y);
+
+        if(!jumpCanceled){
+            Jump();
+        }
 
         Flip();
     }
@@ -77,11 +82,16 @@ public class MovementController : MonoBehaviour
 
     public void Jump()
     {
+        jumpCanceled = false;
         if (respawn.canMove && isGrounded())
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpPower);
             animator.SetBool("isJumping", true);
         }
+    }
+
+    public void StopJump(){
+        jumpCanceled = true;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
