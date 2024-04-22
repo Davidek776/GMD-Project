@@ -6421,6 +6421,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 125467702}
   smoothSpeed: 0.125
+  directOffsetX: 0
+  aheadOffsetX: 5
+  sideOffsetX: 5
+  offsetChangeSpeed: 5
 --- !u!114 &836494737
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8210,6 +8214,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 606399236}
   smoothSpeed: 0.25
+  directOffsetX: 0
+  aheadOffsetX: 5
+  sideOffsetX: 5
+  offsetChangeSpeed: 5
 --- !u!114 &1024478133
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17985,7 +17993,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1876653005076099403, guid: cb542091415064919808b85316aa7efc, type: 3}
       propertyPath: m_LocalScale.x
-      value: 202.5
+      value: 359.4375
       objectReference: {fileID: 0}
     - target: {fileID: 1876653005076099403, guid: cb542091415064919808b85316aa7efc, type: 3}
       propertyPath: m_LocalPosition.x
