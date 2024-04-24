@@ -31,5 +31,8 @@ public class PlayerInputHandler : MonoBehaviour
         {
             movementController.Jump();
         }
+        if(context.canceled && movementController != null){
+            movementController.StopJump();
+        }
     }
 }
