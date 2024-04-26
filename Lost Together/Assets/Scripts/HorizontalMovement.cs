@@ -11,6 +11,8 @@ public class HorizontalMovement : ISwitchable
     private Vector3 originalPosition;
 
     public override bool IsActive => isActive;
+    private int activationCount = 0;
+
 
     private void Start()
     {
@@ -19,20 +21,26 @@ public class HorizontalMovement : ISwitchable
 
     public override void Activate()
     {
-        if (!isActive)
+        isActive = true;
+        activationCount++;
+          if (movementCoroutine != null)
         {
-            movementCoroutine = StartCoroutine(MoveOverTime(originalPosition + new Vector3(horizontalOffset, 0f, 0f)));
-            isActive = true;
-
+            StopCoroutine(movementCoroutine);
         }
+        movementCoroutine = StartCoroutine(MoveOverTime(originalPosition + new Vector3(horizontalOffset, 0f, 0f)));
     }
 
     public override void Deactivate()
     {
-        if (isActive)
+        activationCount--;
+        if (activationCount == 0)
         {
-            movementCoroutine = StartCoroutine(MoveOverTime(originalPosition));
             isActive = false;
+            if (movementCoroutine != null)
+            {
+                StopCoroutine(movementCoroutine);
+            }
+            movementCoroutine = StartCoroutine(MoveOverTime(originalPosition));
         }
     }
 

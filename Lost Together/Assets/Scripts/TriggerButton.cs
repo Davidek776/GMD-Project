@@ -44,8 +44,7 @@ public class TriggerButton : MonoBehaviour
     }
 
     private void OnTriggerEnter2D(Collider2D collision){
-
-        if(collision.gameObject == playerCollider){
+        if(collision.gameObject.name == playerCollider.name){
             isPressingSwitch=true;
             client.Activate();
             }
@@ -53,13 +52,13 @@ public class TriggerButton : MonoBehaviour
 
       private void OnTriggerStay2D(Collider2D collision){
 
-        if(collision.gameObject == playerCollider){
+        if(collision.gameObject.name == playerCollider.name){
             isPressingSwitch=true;
             }
         }
 
    private void OnTriggerExit2D(Collider2D collision){
-    if(collision.gameObject == playerCollider){
+    if(collision.gameObject.name == playerCollider.name){
         gameObject.SetActive(true);
         StartCoroutine(SwitchUpDelay(switchDelay));
     }
@@ -73,4 +72,3 @@ public class TriggerButton : MonoBehaviour
 }
 
 }
-
