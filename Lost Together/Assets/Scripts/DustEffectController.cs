@@ -34,7 +34,6 @@ public class DustEffectController : MonoBehaviour
         if (collider.CompareTag("Ground"))
         {
             isOnGround = true;
-            Debug.Log("On Ground");
             dustEffectFalling.Play();
         }
     }
