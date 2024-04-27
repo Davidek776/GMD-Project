@@ -3103,7 +3103,7 @@ GameObject:
   - component: {fileID: 389159511}
   - component: {fileID: 389159513}
   m_Layer: 0
-  m_Name: PlayerOneUI
+  m_Name: PlayerOneHelp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8764,7 +8764,7 @@ GameObject:
   - component: {fileID: 1064032501}
   - component: {fileID: 1064032503}
   m_Layer: 0
-  m_Name: PlayerTwoUI
+  m_Name: PlayerTwoHelp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
