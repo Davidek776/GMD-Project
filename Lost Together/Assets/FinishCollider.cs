@@ -6,6 +6,9 @@ public class FinishCollider : MonoBehaviour
 {
     private bool playerOneFinished=false;
     private bool playerTwoFinished=false;
+    [SerializeField] private HelpText helpTextOne;
+    [SerializeField] private HelpText helpTextTwo;
+
 
     // Start is called before the first frame update
     void Start()
@@ -21,11 +24,13 @@ public class FinishCollider : MonoBehaviour
 
      private void OnTriggerEnter2D(Collider2D collision){
         if(collision.gameObject.name == "Player1"){
-            Debug.Log("Wait for Player2");
+            Debug.Log("Wait for Player1");
+            helpTextOne.Show();
             playerOneFinished=true;
             }
         if(collision.gameObject.name == "Player2"){
-            Debug.Log("Wait for Player1");
+            Debug.Log("Wait for Player2");
+            helpTextTwo.Show();
             playerTwoFinished=true;
             } 
         if(playerOneFinished && playerTwoFinished){
