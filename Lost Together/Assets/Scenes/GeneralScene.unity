@@ -14106,7 +14106,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1142218131366470055, guid: d0d55c30550e14a79bb5efa28c759424, type: 3}
       propertyPath: m_Offset.y
-      value: 0.3
+      value: 0.11
+      objectReference: {fileID: 0}
+    - target: {fileID: 2199948925937120169, guid: d0d55c30550e14a79bb5efa28c759424, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4715779773785143223, guid: d0d55c30550e14a79bb5efa28c759424, type: 3}
       propertyPath: m_SortingOrder

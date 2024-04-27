@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class FinishCollider : MonoBehaviour
 {
+    private bool playerOneFinished=false;
+    private bool playerTwoFinished=false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -16,31 +19,26 @@ public class FinishCollider : MonoBehaviour
         
     }
 
-    private void OnTriggerEnter2D(Collider2D collision){
-        // if(collision.gameObject.name == "Player1"){
-        //     Debug.Log("Wait for Player2");
-        //     }
-        // if(collision.gameObject.name == "Player2"){
-        //     Debug.Log("Wait for Player1");
-        //     }
-
-        if(collision.gameObject.name == "Player1" && collision.gameObject.name == "Player2"){
-            Debug.Log(collision.gameObject.name);
+     private void OnTriggerEnter2D(Collider2D collision){
+        if(collision.gameObject.name == "Player1"){
+            Debug.Log("Wait for Player2");
+            playerOneFinished=true;
             }
-        
+        if(collision.gameObject.name == "Player2"){
+            Debug.Log("Wait for Player1");
+            playerTwoFinished=true;
+            } 
+        if(playerOneFinished && playerTwoFinished){
+            Debug.Log("Game Over");
+        }
     }
 
-     private void OnTriggerEnter2D(Collider2D collision){
-        // if(collision.gameObject.name == "Player1"){
-        //     Debug.Log("Wait for Player2");
-        //     }
-        // if(collision.gameObject.name == "Player2"){
-        //     Debug.Log("Wait for Player1");
-        //     }
-
-        if(collision.gameObject.name == "Player1" && collision.gameObject.name == "Player2"){
-            Debug.Log(collision.gameObject.name);
+     private void OnTriggerLeave2D(Collider2D collision){
+        if(collision.gameObject.name == "Player1"){
+            playerOneFinished=false;
             }
-        
+        if(collision.gameObject.name == "Player2"){
+            playerTwoFinished=false;
+            } 
     }
 }
