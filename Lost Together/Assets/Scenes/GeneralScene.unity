@@ -1453,7 +1453,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 4
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -1484,9 +1484,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
-        m_MethodName: 
+      - m_Target: {fileID: 828743340}
+        m_TargetAssemblyTypeName: GameOverMenu, Assembly-CSharp
+        m_MethodName: LoadMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2822,7 +2822,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 4
+    m_Mode: 3
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 134297600}
@@ -2853,9 +2853,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
-        m_MethodName: 
+      - m_Target: {fileID: 828743340}
+        m_TargetAssemblyTypeName: GameOverMenu, Assembly-CSharp
+        m_MethodName: RestartGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -7184,6 +7184,7 @@ GameObject:
   - component: {fileID: 828743337}
   - component: {fileID: 828743339}
   - component: {fileID: 828743338}
+  - component: {fileID: 828743340}
   m_Layer: 5
   m_Name: GameOver
   m_TagString: Untagged
@@ -7210,7 +7211,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 155.79276, y: 34.756744}
+  m_AnchoredPosition: {x: 155.79279, y: 34.756744}
   m_SizeDelta: {x: 829, y: 535}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &828743338
@@ -7251,6 +7252,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 828743336}
   m_CullTransparentMesh: 1
+--- !u!114 &828743340
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 828743336}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 101939e5c5835418fb64140d24674fa1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameOverFirstButton: {fileID: 0}
 --- !u!1 &836494734
 GameObject:
   m_ObjectHideFlags: 0
@@ -19734,6 +19748,10 @@ PrefabInstance:
       propertyPath: helpTextTwo
       value: 
       objectReference: {fileID: 1064032503}
+    - target: {fileID: 1343476516446396813, guid: 9b5751906007c403fa55995729e0b6d5, type: 3}
+      propertyPath: gameOverMenu
+      value: 
+      objectReference: {fileID: 828743340}
     - target: {fileID: 1599159745979456784, guid: 9b5751906007c403fa55995729e0b6d5, type: 3}
       propertyPath: m_LocalScale.x
       value: 2.1382806

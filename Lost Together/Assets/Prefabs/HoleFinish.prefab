@@ -189,3 +189,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33e37fdba112542db9c71abe7f9febbd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  helpTextOne: {fileID: 0}
+  helpTextTwo: {fileID: 0}
+  gameOverMenu: {fileID: 0}

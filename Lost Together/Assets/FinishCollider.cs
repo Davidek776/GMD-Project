@@ -8,6 +8,8 @@ public class FinishCollider : MonoBehaviour
     private bool playerTwoFinished=false;
     [SerializeField] private HelpText helpTextOne;
     [SerializeField] private HelpText helpTextTwo;
+    [SerializeField] private GameOverMenu gameOverMenu;
+
 
 
     // Start is called before the first frame update
@@ -34,7 +36,8 @@ public class FinishCollider : MonoBehaviour
             playerTwoFinished=true;
             } 
         if(playerOneFinished && playerTwoFinished){
-            Debug.Log("Game Over");
+            gameOverMenu.Show();
+
         }
     }
 
