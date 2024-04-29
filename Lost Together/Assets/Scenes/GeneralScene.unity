@@ -3623,6 +3623,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9900579a664c43558da8b8325bfa130, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isActive: 0
 --- !u!4 &389751844 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3476546700188626943, guid: f9f69961c816f457a84de74c2df3ec0f, type: 3}
@@ -7555,6 +7556,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameOverFirstButton: {fileID: 134297597}
+  isActive: 0
 --- !u!1 &836494734
 GameObject:
   m_ObjectHideFlags: 0
@@ -8601,6 +8603,9 @@ MonoBehaviour:
   firstButton: {fileID: 320093052}
   player1: {fileID: 606399236}
   player2: {fileID: 125467702}
+  gameOverMenu: {fileID: 828743340}
+  helpTextOne: {fileID: 389159513}
+  helpTextTwo: {fileID: 1064032503}
 --- !u!114 &960489200
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9801,6 +9806,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9900579a664c43558da8b8325bfa130, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isActive: 0
 --- !u!1 &1068060272
 GameObject:
   m_ObjectHideFlags: 0

@@ -4,18 +4,22 @@ using UnityEngine;
 
 public class HelpText : MonoBehaviour
 {
+    public bool isActive;
+
     void Start()
     {
+        isActive = false;
         gameObject.SetActive(false);
     }
 
     public void Show()
     {
+        isActive = true;
         gameObject.SetActive(true);
-        Invoke("HideAfterDelay", 3f);
+        Invoke("Hide", 3f);
     }
 
-    void HideAfterDelay()
+    public void Hide()
     {
         gameObject.SetActive(false);
     }

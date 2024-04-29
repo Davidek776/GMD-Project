@@ -15,6 +15,15 @@ public class PauseMenu : MonoBehaviour
     [SerializeField]
     private GameObject player2;
 
+    [SerializeField]
+    private GameOverMenu gameOverMenu;
+
+    [SerializeField]
+    private HelpText helpTextOne;
+
+    [SerializeField]
+    private HelpText helpTextTwo;
+
     void Start()
     {
         pauseMenu.SetActive(false);
@@ -32,14 +41,19 @@ public class PauseMenu : MonoBehaviour
 
     public void PauseGame()
     {
-        pauseMenu.SetActive(true);
-        EventSystem.current.SetSelectedGameObject(null);
-        EventSystem.current.SetSelectedGameObject(firstButton);
-        Time.timeScale = 0f;
-        isGamePaused = true;
-
-        player1.GetComponent<MovementController>().enabled = false;
-        player2.GetComponent<MovementController>().enabled = false;
+        if(gameOverMenu.isActive==false){
+            if(helpTextOne.isActive==true || helpTextTwo.isActive==true){
+                helpTextOne.Hide();
+                helpTextTwo.Hide();
+            }
+            pauseMenu.SetActive(true);
+            EventSystem.current.SetSelectedGameObject(null);
+            EventSystem.current.SetSelectedGameObject(firstButton);
+            Time.timeScale = 0f;
+            isGamePaused = true;
+            player1.GetComponent<MovementController>().enabled = false;
+            player2.GetComponent<MovementController>().enabled = false;
+        }
     }
 
     public void LoadMenu()

@@ -7,8 +7,11 @@ using UnityEngine.SceneManagement;
 public class GameOverMenu : MonoBehaviour
 {
     public GameObject gameOverFirstButton;
+
+    public bool isActive;
      void Start()
     {
+        isActive = false;
         gameObject.SetActive(false);        
     }
 
@@ -18,6 +21,7 @@ public class GameOverMenu : MonoBehaviour
         EventSystem.current.SetSelectedGameObject(null);
         EventSystem.current.SetSelectedGameObject(gameOverFirstButton); 
         Time.timeScale = 0f;
+        isActive=true;
     }
 
      public void RestartGame()
