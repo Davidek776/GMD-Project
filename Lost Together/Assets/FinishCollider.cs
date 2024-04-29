@@ -4,49 +4,40 @@ using UnityEngine;
 
 public class FinishCollider : MonoBehaviour
 {
-    private bool playerOneFinished=false;
-    private bool playerTwoFinished=false;
+    private bool playerOneFinished = false;
+    private bool playerTwoFinished = false;
     [SerializeField] private HelpText helpTextOne;
     [SerializeField] private HelpText helpTextTwo;
     [SerializeField] private GameOverMenu gameOverMenu;
 
-
-
-    // Start is called before the first frame update
-    void Start()
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-     private void OnTriggerEnter2D(Collider2D collision){
-        if(collision.gameObject.name == "Player1"){
-            Debug.Log("Wait for Player1");
+        if (collision.gameObject.name == "Player1")
+        {
             helpTextOne.Show();
-            playerOneFinished=true;
-            }
-        if(collision.gameObject.name == "Player2"){
-            Debug.Log("Wait for Player2");
+            playerOneFinished = true;
+        }
+        if (collision.gameObject.name == "Player2")
+        {
             helpTextTwo.Show();
-            playerTwoFinished=true;
-            } 
-        if(playerOneFinished && playerTwoFinished){
+            playerTwoFinished = true;
+        }
+        if (playerOneFinished && playerTwoFinished)
+        {
             gameOverMenu.Show();
 
         }
     }
 
-     private void OnTriggerLeave2D(Collider2D collision){
-        if(collision.gameObject.name == "Player1"){
-            playerOneFinished=false;
-            }
-        if(collision.gameObject.name == "Player2"){
-            playerTwoFinished=false;
-            } 
+    private void OnTriggerLeave2D(Collider2D collision)
+    {
+        if (collision.gameObject.name == "Player1")
+        {
+            playerOneFinished = false;
+        }
+        if (collision.gameObject.name == "Player2")
+        {
+            playerTwoFinished = false;
+        }
     }
 }
