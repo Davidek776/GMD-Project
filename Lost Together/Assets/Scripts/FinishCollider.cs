@@ -16,21 +16,17 @@ public class FinishCollider : MonoBehaviour
         {
             helpTextOne.Show();
             playerOneFinished = true;
-            Debug.Log("Player1 "+ playerOneFinished);
         }
         if (collision.gameObject.name == "Player2")
         {
             helpTextTwo.Show();
             playerTwoFinished = true;
-            Debug.Log("Player2 "+ playerTwoFinished);
-
         }
         if (playerOneFinished && playerTwoFinished)
         {
             helpTextOne.Hide();
             helpTextTwo.Hide();
             gameOverMenu.Show();
-
         }
     }
 
@@ -39,14 +35,10 @@ public class FinishCollider : MonoBehaviour
         if (collision.gameObject.name == "Player1")
         {
             playerOneFinished = false;
-            Debug.Log("Player1 "+ playerOneFinished);
-
         }
         if (collision.gameObject.name == "Player2")
         {
             playerTwoFinished = false;
-            Debug.Log("Player2 "+ playerTwoFinished);
-
         }
     }
 }

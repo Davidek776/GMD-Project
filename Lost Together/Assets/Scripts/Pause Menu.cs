@@ -41,8 +41,10 @@ public class PauseMenu : MonoBehaviour
 
     public void PauseGame()
     {
-        if(gameOverMenu.isActive==false){
-            if(helpTextOne.isActive==true || helpTextTwo.isActive==true){
+        if (gameOverMenu.isActive == false)
+        {
+            if (helpTextOne.isActive == true || helpTextTwo.isActive == true)
+            {
                 helpTextOne.Hide();
                 helpTextTwo.Hide();
             }
