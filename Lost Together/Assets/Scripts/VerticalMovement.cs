@@ -7,7 +7,7 @@ public class VerticalMovement : ISwitchable
     private Coroutine movementCoroutine;
 
     public float verticalOffset = 1f;
-    public float verticalMovementSpeed = 1f; // New field for vertical movement speed
+    public float verticalMovementSpeed = 1f;
 
     private Vector3 originalPosition;
     private int activationCount = 0;
@@ -48,7 +48,7 @@ public class VerticalMovement : ISwitchable
     {
         float elapsedTime = 0f;
         Vector3 initialPosition = transform.position;
-        float duration = Vector3.Distance(initialPosition, targetPosition) / verticalMovementSpeed; // Use vertical movement speed here
+        float duration = Vector3.Distance(initialPosition, targetPosition) / verticalMovementSpeed;
         while (elapsedTime < duration)
         {
             elapsedTime += Time.deltaTime;

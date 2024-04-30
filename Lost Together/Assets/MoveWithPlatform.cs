@@ -6,7 +6,7 @@ public class MoveWithPlatform : MonoBehaviour
 {
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.gameObject.name == "Player1" || collision.gameObject.name == "Player2")
+        if (collision.gameObject.name == "Player1" || collision.gameObject.name == "Player2")
         {
             collision.collider.transform.SetParent(transform);
         }
@@ -14,7 +14,7 @@ public class MoveWithPlatform : MonoBehaviour
 
     private void OnCollisionStay2D(Collision2D collision)
     {
-        if(collision.gameObject.name == "Player1" || collision.gameObject.name == "Player2")
+        if (collision.gameObject.name == "Player1" || collision.gameObject.name == "Player2")
         {
             collision.collider.transform.SetParent(transform);
         }
@@ -22,7 +22,7 @@ public class MoveWithPlatform : MonoBehaviour
 
     private void OnCollisionExit2D(Collision2D collision)
     {
-        if(collision.gameObject.name == "Player1" || collision.gameObject.name == "Player2")
+        if (collision.gameObject.name == "Player1" || collision.gameObject.name == "Player2")
         {
             collision.collider.transform.SetParent(null);
         }

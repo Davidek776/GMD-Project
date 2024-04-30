@@ -7,7 +7,7 @@ public class HorizontalMovement : ISwitchable
     private Coroutine movementCoroutine;
 
     public float horizontalOffset = 1f;
-    public float movementSpeed = 1f; 
+    public float movementSpeed = 1f;
 
     private Vector3 originalPosition;
 
@@ -48,7 +48,7 @@ public class HorizontalMovement : ISwitchable
     {
         float elapsedTime = 0f;
         Vector3 initialPosition = transform.position;
-        float duration = Vector3.Distance(initialPosition, targetPosition) / movementSpeed; 
+        float duration = Vector3.Distance(initialPosition, targetPosition) / movementSpeed;
         while (elapsedTime < duration)
         {
             elapsedTime += Time.deltaTime;
