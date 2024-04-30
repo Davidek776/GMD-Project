@@ -7,9 +7,9 @@ public class VerticalMovement : ISwitchable
     private Coroutine movementCoroutine;
 
     public float verticalOffset = 1f;
+    public float verticalMovementSpeed = 1f; // New field for vertical movement speed
 
     private Vector3 originalPosition;
-
     private int activationCount = 0;
 
     private void Start()
@@ -28,7 +28,6 @@ public class VerticalMovement : ISwitchable
             StopCoroutine(movementCoroutine);
         }
         movementCoroutine = StartCoroutine(MoveOverTime(originalPosition + new Vector3(0f, verticalOffset, 0f)));
-
     }
 
     public override void Deactivate()
@@ -43,15 +42,13 @@ public class VerticalMovement : ISwitchable
             }
             movementCoroutine = StartCoroutine(MoveOverTime(originalPosition));
         }
-
     }
 
     private IEnumerator MoveOverTime(Vector3 targetPosition)
     {
         float elapsedTime = 0f;
         Vector3 initialPosition = transform.position;
-        float duration = 1f;
-
+        float duration = Vector3.Distance(initialPosition, targetPosition) / verticalMovementSpeed; // Use vertical movement speed here
         while (elapsedTime < duration)
         {
             elapsedTime += Time.deltaTime;

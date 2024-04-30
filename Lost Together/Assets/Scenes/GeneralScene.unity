@@ -8377,6 +8377,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   verticalOffset: -0.7
+  verticalMovementSpeed: 0.5
 --- !u!4 &823807447
 Transform:
   m_ObjectHideFlags: 0
@@ -8788,6 +8789,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   verticalOffset: 4
+  verticalMovementSpeed: 3
 --- !u!4 &843812315 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1248029261147716766, guid: 511ee5d3398d0445ba8ca9fff7829fc4, type: 3}
@@ -15409,7 +15411,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   horizontalOffset: 9.2
-  movementSpeed: 1
+  movementSpeed: 5
 --- !u!1001 &1529904939
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21359,7 +21361,7 @@ Transform:
   m_GameObject: {fileID: 2147156113}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 118.92, y: 4.84, z: -0.07150003}
+  m_LocalPosition: {x: 119.07, y: 4.84, z: -0.07150003}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:

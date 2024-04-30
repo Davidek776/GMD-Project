@@ -7,7 +7,7 @@ public class HorizontalMovement : ISwitchable
     private Coroutine movementCoroutine;
 
     public float horizontalOffset = 1f;
-    public float movementSpeed = 0.1f; 
+    public float movementSpeed = 1f; 
 
     private Vector3 originalPosition;
 
