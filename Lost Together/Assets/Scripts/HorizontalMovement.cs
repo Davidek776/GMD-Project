@@ -6,13 +6,13 @@ public class HorizontalMovement : ISwitchable
     private bool isActive;
     private Coroutine movementCoroutine;
 
-    public float horizontalOffset = 1f; 
+    public float horizontalOffset = 1f;
+    public float movementSpeed = 0.1f; 
 
     private Vector3 originalPosition;
 
     public override bool IsActive => isActive;
     private int activationCount = 0;
-
 
     private void Start()
     {
@@ -23,7 +23,7 @@ public class HorizontalMovement : ISwitchable
     {
         isActive = true;
         activationCount++;
-          if (movementCoroutine != null)
+        if (movementCoroutine != null)
         {
             StopCoroutine(movementCoroutine);
         }
@@ -48,8 +48,7 @@ public class HorizontalMovement : ISwitchable
     {
         float elapsedTime = 0f;
         Vector3 initialPosition = transform.position;
-        float duration = 1f;
-
+        float duration = Vector3.Distance(initialPosition, targetPosition) / movementSpeed; 
         while (elapsedTime < duration)
         {
             elapsedTime += Time.deltaTime;
