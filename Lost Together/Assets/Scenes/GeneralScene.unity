@@ -4889,7 +4889,7 @@ PrefabInstance:
     - target: {fileID: 4943006143075005680, guid: 8dac885f54e794f158945af83aa37306, type: 3}
       propertyPath: playerCollider
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1876310555}
     - target: {fileID: 4971908202799710598, guid: 8dac885f54e794f158945af83aa37306, type: 3}
       propertyPath: m_Name
       value: TriggerButton
@@ -19680,7 +19680,7 @@ Transform:
   m_GameObject: {fileID: 2147156113}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 173.95, y: 2.61, z: -0.07150003}
+  m_LocalPosition: {x: 118.92, y: 4.84, z: -0.07150003}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
