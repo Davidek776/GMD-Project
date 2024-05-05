@@ -20,7 +20,7 @@ public class SoundFXManager : MonoBehaviour
     {
         if (audioSource != null)
             return;
-        
+
         audioSource = Instantiate(soundFXObject, spawnTransform.position, Quaternion.identity);
 
         audioSource.clip = clip;
@@ -31,13 +31,13 @@ public class SoundFXManager : MonoBehaviour
         Destroy(audioSource.gameObject, clipLength);
     }
 
-        public void PlayRandomSound(AudioClip[] clip, Transform spawnTransform, float volume)
+    public void PlayRandomSound(AudioClip[] clip, Transform spawnTransform, float volume)
     {
         if (audioSource != null)
             return;
 
         int randomIndex = Random.Range(0, clip.Length);
-        
+
         audioSource = Instantiate(soundFXObject, spawnTransform.position, Quaternion.identity);
 
         audioSource.clip = clip[randomIndex];
