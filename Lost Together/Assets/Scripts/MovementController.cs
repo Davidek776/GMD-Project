@@ -19,6 +19,7 @@ public class MovementController : MonoBehaviour
     
     private Respawn respawn;
     private ControlsHint controlsHint;
+    private CharacterFXPlayer characterFXPlayer;
     public int playerIndex = 0;
 
     void Start(){
@@ -26,6 +27,7 @@ public class MovementController : MonoBehaviour
         respawn = GetComponent<Respawn>();
         rb = GetComponent<Rigidbody2D>();
         controlsHint = GetComponent<ControlsHint>();
+        characterFXPlayer = GetComponent<CharacterFXPlayer>();
 
         if (gameObject.CompareTag("Player1"))
             jumpPower = 8.0f;
@@ -87,6 +89,7 @@ public class MovementController : MonoBehaviour
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpPower);
             animator.SetBool("isJumping", true);
+            characterFXPlayer.PlayJumpSound(transform);
         }
     }
 
