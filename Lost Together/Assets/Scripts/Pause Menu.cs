@@ -4,12 +4,13 @@ using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour
 {
-    public static bool isGamePaused = false;
+    public static PauseMenu instance;
+    public bool isGamePaused = false;
 
     [SerializeField]
     private GameObject pauseMenu;
     [SerializeField]
-    private GameObject firstButton;
+    private GameObject mainFirstButton;
     [SerializeField]
     private GameObject player1;
     [SerializeField]
@@ -23,6 +24,14 @@ public class PauseMenu : MonoBehaviour
 
     [SerializeField]
     private HelpText helpTextTwo;
+
+    private void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+        }
+    }
 
     void Start()
     {
@@ -48,9 +57,9 @@ public class PauseMenu : MonoBehaviour
                 helpTextOne.Hide();
                 helpTextTwo.Hide();
             }
-            pauseMenu.SetActive(true);
-            EventSystem.current.SetSelectedGameObject(null);
-            EventSystem.current.SetSelectedGameObject(firstButton);
+
+            LoadPauseMenu();
+
             Time.timeScale = 0f;
             isGamePaused = true;
             player1.GetComponent<MovementController>().enabled = false;
@@ -58,14 +67,21 @@ public class PauseMenu : MonoBehaviour
         }
     }
 
+    public void HidePauseMenu()
+    {
+        pauseMenu.SetActive(false);
+    }
+
+    public void LoadPauseMenu()
+    {
+        pauseMenu.SetActive(true);
+        EventSystem.current.SetSelectedGameObject(null);
+        EventSystem.current.SetSelectedGameObject(mainFirstButton);
+    }
+
     public void LoadMenu()
     {
         SceneManager.LoadScene("Menu");
         Time.timeScale = 1f;
-    }
-
-    public void QuitGame()
-    {
-        Application.Quit();
     }
 }
