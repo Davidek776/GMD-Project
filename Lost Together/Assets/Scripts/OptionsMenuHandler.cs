@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 
 public class OptionsMenuHandler : MonoBehaviour
@@ -7,10 +8,12 @@ public class OptionsMenuHandler : MonoBehaviour
     public static OptionsMenuHandler instance;
 
     [SerializeField]
-    private GameObject optionsMenu;
+    private GameObject optionsMenu
+;
     [SerializeField]
     private GameObject optionsFirstButton, optionsCloseButton;
-
+    [SerializeField]
+    private Slider masterVolumeSlider, soundEffectsVolumeSlider, backgroundMusicVolumeSlider;
     private void Awake()
     {
         if (instance == null)
@@ -23,6 +26,7 @@ public class OptionsMenuHandler : MonoBehaviour
     void Start()
     {
         optionsMenu.SetActive(false);
+        SetSliderValues();
     }
 
     public void OpenOptionsMenu()
@@ -39,5 +43,21 @@ public class OptionsMenuHandler : MonoBehaviour
 
         EventSystem.current.SetSelectedGameObject(null);
         EventSystem.current.SetSelectedGameObject(optionsCloseButton);
+    }
+
+    private void SetSliderValues()
+    {
+        if (PlayerPrefs.HasKey("masterVolume"))
+        {
+            masterVolumeSlider.value = PlayerPrefs.GetFloat("masterVolume");
+        }
+        if (PlayerPrefs.HasKey("soundEffectsVolume"))
+        {
+            soundEffectsVolumeSlider.value = PlayerPrefs.GetFloat("soundEffectsVolume");
+        }
+        if (PlayerPrefs.HasKey("backgroundMusicVolume"))
+        {
+            backgroundMusicVolumeSlider.value = PlayerPrefs.GetFloat("backgroundMusicVolume");
+        }
     }
 }

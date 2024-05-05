@@ -1996,6 +1996,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 198153308}
+  - component: {fileID: 198153310}
+  - component: {fileID: 198153309}
   m_Layer: 5
   m_Name: Options Menu
   m_TagString: Untagged
@@ -2022,11 +2024,49 @@ RectTransform:
   - {fileID: 1154877312}
   m_Father: {fileID: 960489203}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 400, y: 350}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &198153309
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 198153307}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.392}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &198153310
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 198153307}
+  m_CullTransparentMesh: 1
 --- !u!4 &206963205 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1146261018430237462, guid: 478a4878af18c4cb08caf2828c7883e5, type: 3}
@@ -5182,7 +5222,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &446548309
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10714,7 +10754,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 113}
+  m_AnchoredPosition: {x: 0, y: 115}
   m_SizeDelta: {x: -164.5357, y: -279.1409}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &932679298
@@ -11083,6 +11123,9 @@ MonoBehaviour:
   optionsMenu: {fileID: 198153307}
   optionsFirstButton: {fileID: 1781244264}
   optionsCloseButton: {fileID: 1561464526}
+  masterVolumeSlider: {fileID: 1781244265}
+  soundEffectsVolumeSlider: {fileID: 748847219}
+  backgroundMusicVolumeSlider: {fileID: 819739774}
 --- !u!1 &968376688
 GameObject:
   m_ObjectHideFlags: 0
