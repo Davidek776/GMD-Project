@@ -10376,6 +10376,7 @@ GameObject:
   m_Component:
   - component: {fileID: 918445863}
   - component: {fileID: 918445862}
+  - component: {fileID: 918445864}
   m_Layer: 0
   m_Name: BackgroundMusicManager
   m_TagString: Untagged
@@ -10494,6 +10495,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &918445864
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 918445861}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7de8323e1bb7474fa7437d2eb057554, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &920808210 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2088537188802109529, guid: 8f6e7292fe5704df6958d8d52b230623, type: 3}
@@ -10960,6 +10973,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a5fb9d2af11014f8d99a1694250a6b26, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isGamePaused: 0
   pauseMenu: {fileID: 446548308}
   mainFirstButton: {fileID: 320093052}
   player1: {fileID: 2065991125565694982}
