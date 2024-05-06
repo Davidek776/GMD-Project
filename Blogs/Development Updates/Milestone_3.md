@@ -45,7 +45,15 @@ And this is one part of the controller to menu mapping (opening and closing menu
 <img width="550" alt="Main menu" src="../Screenshots/MenuHandler-Code.png"> 
 <br/>
 
+In the function LoadPauseMenu below you can see how we manually assign a first button to be selected when pause menu is loaded, this helps us to navigate through the menu with a controller.
 
+<img width="550" alt="Main menu" src="../Screenshots/LoadPauseMenu-Function.png"> 
+<br/>
+
+For a better usability we linked the buttons in a menu in a way that if you are on the OPTIONS menu as you can see on the screenshot below, you will then loop all the way back to the top and vice versa.
+
+<img width="550" alt="Main menu" src="../Screenshots/ButtonMappings-GUI.png"> 
+<br/>
 
 ### Enemies
 We did not have enough time to complete this feature, so we moved it to the next milestone.
