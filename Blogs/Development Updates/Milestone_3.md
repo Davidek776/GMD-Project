@@ -48,4 +48,4 @@ And this is one part of the controller to menu mapping (opening and closing menu
 
 
 ### Enemies
-We did not have enough time to complete this feature, so we moved it to the next milestone
+We did not have enough time to complete this feature, so we moved it to the next milestone.
