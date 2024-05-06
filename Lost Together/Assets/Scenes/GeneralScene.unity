@@ -1510,7 +1510,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 89}
+  m_AnchoredPosition: {x: 0, y: -9}
   m_SizeDelta: {x: 157.6579, y: 70.8591}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &134297599
@@ -1549,8 +1549,8 @@ MonoBehaviour:
   m_Navigation:
     m_Mode: 4
     m_WrapAround: 0
-    m_SelectOnUp: {fileID: 337218031}
-    m_SelectOnDown: {fileID: 507491616}
+    m_SelectOnUp: {fileID: 507491616}
+    m_SelectOnDown: {fileID: 337218031}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
   m_Transition: 3
@@ -3652,8 +3652,8 @@ MonoBehaviour:
   m_Navigation:
     m_Mode: 4
     m_WrapAround: 0
-    m_SelectOnUp: {fileID: 507491616}
-    m_SelectOnDown: {fileID: 134297600}
+    m_SelectOnUp: {fileID: 134297600}
+    m_SelectOnDown: {fileID: 507491616}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
   m_Transition: 3
@@ -6269,7 +6269,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -13.7}
+  m_AnchoredPosition: {x: 0, y: 88}
   m_SizeDelta: {x: 157.6579, y: 70.8591}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &507491615
@@ -6306,10 +6306,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 4
     m_WrapAround: 0
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
+    m_SelectOnUp: {fileID: 337218031}
+    m_SelectOnDown: {fileID: 134297600}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
   m_Transition: 3
@@ -9524,8 +9524,8 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 811264386}
-  - {fileID: 134297598}
   - {fileID: 507491614}
+  - {fileID: 134297598}
   - {fileID: 337218029}
   m_Father: {fileID: 899250033}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
