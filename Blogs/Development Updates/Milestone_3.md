@@ -29,11 +29,22 @@ We made it as an undestroyable singleton object. in the Awake() function we assi
 ### Dust Effect
 For the dust effect we created a custom dust material which we then used with a particle system to screate a dusto effect for running and landing a jump, so basically whenever a character moves and is on the ground we play the movement particles and same with landing a jump, we play the jump particles, both the particle systems are then children of each character.
 
--- GIFS --
+![Dust Effect gif](../gifs/DustEffec_Full_Screen%20(2).gif)
+
 ### Game Loop
 
 ### Mapping controlls with VIA Arcade Machine
 This was a bit more tricky one. We had some troubles with setting the controlls up because we had a very specific scenario, 2 players already in the scene and each of them should be controlled via a controller when connected on button press. We also had to map the menu navigation to the controllers so that it can be seamlessly navigated on the VIA Arcade Machine.
+
+This is the how we handle the controller to player mapping in our script using the PlayerInputManager:
+
+<img width="550" alt="Main menu" src="../Screenshots/PlayerControllerMapping-Code.png"> 
+<br/>
+And this is one part of the controller to menu mapping (opening and closing menu on pressing start button on a controller):
+
+<img width="550" alt="Main menu" src="../Screenshots/MenuHandler-Code.png"> 
+<br/>
+
 
 
 ### Enemies
