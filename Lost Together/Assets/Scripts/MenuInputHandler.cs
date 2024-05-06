@@ -1,16 +1,21 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class MenuInputHandler : MonoBehaviour
 {
-    public void HandleOpenCloseMenu(){
-        var pauseMenu = GameObject.FindGameObjectWithTag("InGameCanvas").GetComponent<PauseMenu>();
-        if (PauseMenu.isGamePaused)
+    public void HandleOpenCloseMenu(InputAction.CallbackContext context)
+    {
+        if (context.performed)
         {
-            pauseMenu.ResumeGame();
-        }
-        else
-        {
-            pauseMenu.PauseGame();
+            if (PauseMenu.instance.isGamePaused)
+            {
+                OptionsMenuHandler.instance.CloseOptionsMenu();
+                PauseMenu.instance.ResumeGame();
+            }
+            else
+            {
+                PauseMenu.instance.PauseGame();
+            }
         }
     }
 }

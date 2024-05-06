@@ -21,17 +21,17 @@ public class PlayerInputHandler : MonoBehaviour
     public void Move(InputAction.CallbackContext context)
     {
         var horizontalInput = context.ReadValue<Vector2>().x;
-        if(movementController != null)
+        if(movementController != null && movementController.isActiveAndEnabled)
             movementController.SetHorizontalInput(horizontalInput);
     }
 
     public void Jump(InputAction.CallbackContext context)
     {
-        if (context.performed && movementController != null)
+        if (context.performed && movementController != null && movementController.isActiveAndEnabled)
         {
             movementController.Jump();
         }
-        if(context.canceled && movementController != null){
+        if(context.canceled && movementController != null && movementController.isActiveAndEnabled){
             movementController.StopJump();
         }
     }
