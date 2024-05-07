@@ -31,5 +31,7 @@
   
    #### 27.05.-04.06
    - Some things we might identify during the previous weeks
+   - Loading Screen?
+   - Custom game icon?
    - Create a demo
    - Start on stuff for final hand-in
