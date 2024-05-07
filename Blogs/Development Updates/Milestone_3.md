@@ -3,7 +3,8 @@
 ## Dev Update 3
 The third milestone for this project is on 7th May. The goal of this milestone was to create Level design (finalize first level), Sound effects, Background music, Dust effect when running/landing a jump, GameLoop (Game over UI), Map controlls with VIA Arcade Machine, Possibly: Enemies
 
-### Level Design
+### Level Design(Finish First Level)
+Important part in this milestone was to finish the first level. To achieve that we added one more obstacle and finish line (You can read more about finish line in section game loop). In the image bellow can be seen new obstacle that was added to the first level.
 
 ### Sound Effects
 This feature was one of the more challengin ones, not only did we have to create a system for playing sound effects (for now only while character jumps) but we also needed to adjust our options menu and sound volume preferences.
