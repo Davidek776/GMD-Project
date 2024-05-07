@@ -3,8 +3,8 @@
 ## Dev Update 3
 The third milestone for this project is on 7th May. The goal of this milestone was to create Level design (finalize first level), Sound effects, Background music, Dust effect when running/landing a jump, GameLoop (Game over UI), Map controlls with VIA Arcade Machine, Possibly: Enemies
 
-### Level Design(Finish First Level)
-Important part in this milestone was to finish the first level. To achieve that we added one more obstacle and finish line (You can read more about finish line in section game loop). In the image bellow can be seen new obstacle that was added to the first level.
+### Level Design (Finished First Level)
+An important part of this milestone was to finish the first level. To achieve that we added one more obstacle and a finish line (You can read more about the finish line in the section game loop). In the image, below can be seen new obstacle that was added to the first level.
 
 <img width="480" alt="Main menu" src="../Screenshots/NewObstacleLevelOne.png"> 
 
@@ -35,7 +35,11 @@ For the dust effect we created a custom dust material which we then used with a 
 ![Dust Effect gif](../gifs/DustEffec_Full_Screen%20(2).gif)
 
 ### Game Loop
-Next feature that was added to the project was game loop. It consists of HoleFinish game object, Game Over Menu and Player Help UI. So, now if only one of the players enters the Hole at the end of the level then the Help UI will be shown to that player and vice versa. If both players enter the hole, then Game Over UI is shown to users and level is finished. Game Over UI consists of three options which are: Menu, Next and Restart. On the picture bellow can be seen Player Help UI, Game Over Menu and Hole finish game object.
+The next feature that was added to the project was a game loop. It consists of HoleFinish game object, Game Over Menu, and Player Help UI. So, now if only one of the players enters the Hole at the end of the level then the Help UI will be shown to that player and vice versa. If both players enter the hole, then the Game Over UI is shown to users, when the level is finished. Game Over UI consists of three options which are: Menu, Next, and Restart. In the picture below can be seen Player Help UI, Game Over Menu and Hole finish game object.
+
+<img width="400" alt="Main menu" src="../Screenshots/HelpPlayerUI.png"> 
+<img width="400" alt="Main menu" src="../Screenshots/GameOverUI.png"> 
+
 
 ### Mapping controlls with VIA Arcade Machine
 This was a bit more tricky one. We had some troubles with setting the controlls up because we had a very specific scenario, 2 players already in the scene and each of them should be controlled via a controller when connected on button press. We also had to map the menu navigation to the controllers so that it can be seamlessly navigated on the VIA Arcade Machine.
