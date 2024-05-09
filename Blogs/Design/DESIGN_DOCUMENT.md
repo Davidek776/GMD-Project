@@ -4,7 +4,7 @@
 
 # Game Design Document - Lost Together
 
-Current version: 1.0
+Current version: 2.0
 
 ## High-Level Concept/Design
 
@@ -23,6 +23,7 @@ The game is suitable for everyone who is ready for a unique adventure and is rea
 - Local multiplayer
 - Parallax background
 - Easy controlls
+- Beautiful Graphics
 
 ## Product Design
 
@@ -35,54 +36,46 @@ The game is developed for VIA Arcade Machine.
 2D cooperative platformer 🕹️
 <!-- David 2 -->
 ### Art Style
-The game is designed to give players a feeling of having more freedom than other 2D cooperative games usually provide and to use a game environment that is rarely seen. To achieve this visual sensation is used parallax animation which is triggered when game characters are moving. Parallax animations will be achieved by moving each layer of the 2D background asset at a different speed. Each level will consist of nicely designed 2D assets, that will be also huge enough to give the players a sensation of freedom.
+The game is designed to give players a feeling of having more freedom than other 2D cooperative games usually provide and to use a game environment that is rarely seen. Since the game is 2D, we wanted to make it more visually interesting by adding a parallax effect to the background, so that different layers of the background move at differrent speeds when the player moves and together add more depth to the game.
 
 <!-- Simon 1 -->
 ### Sound Design
-The overall approach to sound design is to have a thematic background music and unique sound effects. The aim is to also have an AI generated voiceovers.
+The overall approach to sound design is to have a thematic background music and unique sound effects. There are general sound settings to manage the volume of each sound.
 
 ## Detailed & Game System Design
 
 <!-- David 2 -->
 ### Game Mechanics
-Game characters have to avoid obstacles and enemies and progress at the game level. Characters have to as well collaborate together to help each other pass through the level.
+Players have to avoid obstacles, enemies, and collaborate together to help each other progress through the level.
+
 #### Characters
-The movement for both characters is the same but they have different skills. One of them is strong and can move stuf around and the other one can jump twice as high, this enables the character to get over obstacles that are much higher than others.
+The movement for both characters is the same but they have different skills. One of them is strong and can move heavy objects and the other one has a bigger jumping power, this enables the character to get over obstacles that are much higher than others.
+
 #### Obstacles
-There are multiple types of obstacles. Heavy obstacles, high obstacles, mechanical obstacles whichcan only be moved by trigger, there are 2 types of triggers - one for each character
+There are multiple types of obstacles. Heavy obstacle, high obstacle, mechanical obstacle, which can only be moved by trigger, and there are 2 types of triggers - one for each character
 
 <!-- Simon 1 -->
 ### Level Design
-There are 5 differrent levels in differrent environments. Each of them has a different style of obstacles and enemies to keep the player entertained and guessing. 
+There are 3 differrent levels. The first level is an introduction level, where players get to know the mechanics of the game. Second level is more complicated as it consist from multiple horizontal layers which makes it much more difficult for the player to navigate through. The final third level is similar to the second level with one small adjustment - light. There is almost no visibility as the level is hidden in darkness, the only soure of light in the game is a light around each of the character. 
 
-The average time for completing a level should besomewhere between 5-8 minutes. ⏱️ 
+There are checkpoint in each of the levels so that when one player dies at the end of the level the other doesn't have to sacrifice himself as well to help the other player to get through the whole map again, as it is not possible for one player to get through the whole level by himself.
 
-<!-- David 2 -->
-### Characters
-The main characters are called Ethan and Amelia. 
-
-Ethan is a young adventurous character known for his strength and energy. He is full of energy and therefore his abilities are that he can move heavy stuff. Also thanks to his energy, he can be a source of light and illuminate dark areas in the game.
-
-Amelia is a bit calmer character that has a deep connection with nature. Thanks to her connection with nature she can manipulate water or use wind force to slow down enemies.
-
-They come from a land called Eldonia. Because of the ancient prophecy which tells that once in a thousand years when planets Eldonia, Venius and Plutomius are aligned behind each other somewhere on the planet Eldonia will be generated Astral Relic. As the prophecy foretold, those who touch it will be teleported to planet Venius. With a mission to find the next 11 missing Astral Relics. After all 12 Astral Relics are collected, they will generate an ancient energy that will .......... and that will teleport the characters back to Eldonia.  
-
-Ethan and Amelia were those who randomly found the first Astral Relic and they were sent to a Venius. On a mission to find each 11 missing Astral Relics they have to collaborate to avoid obstacles and enemies.
-
+The average time for completing a level should be somewhere between 5-10 minutes. ⏱️ 
 
 <!-- Simon 1 -->
 ### User Interface (UI)
-Describe the user interface elements, including menus, HUD, and other on-screen displays.
+The only user interface in the game are menus to navigate through the game and control sevelar settings, or informational UIs such as controls hint. Those are the menus in the game:
 
-There should be following UI elements in the game:
-
-- General menu
+- Main menu
+- Pause menu
+- Game over menu
 - Level selection menu
-- General settings
+- Options (Sound settings)
 
 <!-- David 2 -->
 ### Controls
-The game is developed for an arcade machine, which consists of two joysticks, where each has 8 directions. There are also 6 buttons for each player. 
+The game can be played by any gamepad, the left stick is used for horizontal movement and the south button of the gamepad is a jump. The pause menu can be opened and closed by pressing the 'start' button on a gamepad and buttons in the menu are selected by clicking the west button.
+
 <!-- Simon 1 -->
 ### Technical Specifications
 - Must be playable on the VIA Arcade Machine
@@ -93,5 +86,5 @@ The game is developed for an arcade machine, which consists of two joysticks, wh
 
 # 3 Milestones:
 1. 17.03.2024 - Character controllers, Obstacles, Menu, Split Screen
-2. ?.2024 - Environment, Triggers, Collaboration logic between characters, Animations, Character sprites
-3. ?.2024 - Level design, Sound effects, Background music, Possibly: Enemies, 
+2. 14.04.2024 - Environment, Triggers, Collaboration logic between characters, Animations, Character sprites
+3. 07.05.2024 - Level design (finalize first level), Sound effects, Background music, Dust effect when running/landing a jump, GameLoop (Game over UI), Map controlls with VIA Arcade Machine, Possibly:      Enemies,
