@@ -4,54 +4,107 @@ using UnityEngine;
 
 public class EnemyPatrol : MonoBehaviour
 {
-    public GameObject pointA;
-    public GameObject pointB;
-
+    public Transform pointA;
+    public Transform pointB;
+    public float speed = 2f;
+    public float chaseRange = 5f;
     private Rigidbody2D rb;
     private Animator anim;
     private Transform currentPoint;
+    private GameObject[] players;
 
-    public float speed;
-
-    void Start()
+    private void Start()
     {
-    rb=GetComponent<Rigidbody2D>();
-    anim=GetComponent<Animator>();
-    currentPoint=pointB.transform;
-    anim.SetBool("isRunning", true);
+        rb = GetComponent<Rigidbody2D>();
+        anim = GetComponent<Animator>();
+        currentPoint = pointB; 
+        anim.SetBool("isRunning", true);
     }
 
-    void Update()
+   private void Update()
+{
+    GameObject[] players = GameObject.FindGameObjectsWithTag("Player1");
+    GameObject[] players2 = GameObject.FindGameObjectsWithTag("Player2");
+    List<GameObject> allPlayers = new List<GameObject>(players);
+    allPlayers.AddRange(players2);
+
+    GameObject closestPlayer = FindClosestPlayer(allPlayers);
+
+    if (closestPlayer != null)
     {
-        Vector2 point=currentPoint.position-transform.position;
-        if(currentPoint==pointB.transform){
-            rb.velocity=new Vector2(speed,0);
-        }
-        else{
-            rb.velocity=new Vector2(-speed,0);
-        }
+        float distanceToPlayer = Vector2.Distance(transform.position, closestPlayer.transform.position);
 
-        if(Vector2.Distance(transform.position,currentPoint.position)<0.5f && currentPoint==pointB.transform){
-            Flip();
-            currentPoint=pointA.transform;
+        if (distanceToPlayer < chaseRange && IsPlayerInPatrolBounds(closestPlayer))
+        {
+            ChasePlayer(closestPlayer);
+            return; 
         }
+    }
+    Patrol();
+}
 
-        if(Vector2.Distance(transform.position,currentPoint.position)<0.5f && currentPoint==pointA.transform){
-            Flip();
-            currentPoint=pointB.transform;
+private GameObject FindClosestPlayer(List<GameObject> players)
+{
+    float closestDistance = Mathf.Infinity;
+    GameObject closestPlayer = null;
 
+    foreach (GameObject player in players)
+    {
+        float distance = Vector2.Distance(transform.position, player.transform.position);
+        if (distance < closestDistance)
+        {
+            closestDistance = distance;
+            closestPlayer = player;
         }
     }
 
-    private void OnDrawGizmos(){
-        Gizmos.DrawWireSphere(pointA.transform.position, 0.5f);
-        Gizmos.DrawWireSphere(pointA.transform.position, 0.5f);
-        Gizmos.DrawLine(pointA.transform.position, pointB.transform.position);
+    return closestPlayer;
+}
+
+    private void Patrol()
+    {
+        Vector2 targetPoint = currentPoint.position;
+        Vector2 moveDirection = (targetPoint - (Vector2)transform.position).normalized;
+        rb.velocity = new Vector2(moveDirection.x * speed, rb.velocity.y);
+
+        if (moveDirection.x > 0)
+        {
+            transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
+        }
+        else if (moveDirection.x < 0)
+        {
+            transform.localScale = new Vector3(-Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
+        }
+
+        if (Vector2.Distance(transform.position, targetPoint) < 0.1f)
+        {
+            SwitchPatrolPoint();
+        }
     }
 
-    private void Flip(){
-        Vector3 localScale=transform.localScale; 
-        localScale.x*=-1;
-        transform.localScale=localScale;
+    private void ChasePlayer(GameObject player)
+    {
+        Vector2 direction = (player.transform.position - transform.position).normalized;
+        rb.velocity = new Vector2(direction.x * speed, rb.velocity.y);
+
+        if (player.transform.position.x > transform.position.x)
+        {
+            transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
+        }
+        else
+        {
+            transform.localScale = new Vector3(-Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
+        }
+    }
+
+    private void SwitchPatrolPoint()
+    {
+        currentPoint = (currentPoint == pointA) ? pointB : pointA;
+    }
+
+    private bool IsPlayerInPatrolBounds(GameObject player)
+    {
+        return player.transform.position.x >= Mathf.Min(pointA.position.x, pointB.position.x)
+            && player.transform.position.x <= Mathf.Max(pointA.position.x, pointB.position.x);
     }
 }
