@@ -61,26 +61,25 @@ private GameObject FindClosestPlayer(List<GameObject> players)
     return closestPlayer;
 }
 
-    private void Patrol()
+   private void Patrol()
+{
+    Vector2 targetPoint = new Vector2(currentPoint.position.x, transform.position.y);
+    Vector2 moveDirection = (targetPoint - (Vector2)transform.position).normalized;
+    rb.velocity = new Vector2(moveDirection.x * speed, 0);
+    if (moveDirection.x > 0)
     {
-        Vector2 targetPoint = currentPoint.position;
-        Vector2 moveDirection = (targetPoint - (Vector2)transform.position).normalized;
-        rb.velocity = new Vector2(moveDirection.x * speed, rb.velocity.y);
-
-        if (moveDirection.x > 0)
-        {
-            transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
-        }
-        else if (moveDirection.x < 0)
-        {
-            transform.localScale = new Vector3(-Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
-        }
-
-        if (Vector2.Distance(transform.position, targetPoint) < 0.1f)
-        {
-            SwitchPatrolPoint();
-        }
+        transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
     }
+    else if (moveDirection.x < 0)
+    {
+        transform.localScale = new Vector3(-Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
+    }
+    if (Vector2.Distance(transform.position, targetPoint) < 0.1f)
+    {
+        SwitchPatrolPoint();
+    }
+}
+
 
     private void ChasePlayer(GameObject player)
     {
@@ -113,5 +112,5 @@ private GameObject FindClosestPlayer(List<GameObject> players)
         Gizmos.DrawWireSphere(pointA.transform.position, 0.5f);
         Gizmos.DrawLine(pointA.transform.position, pointB.transform.position);
     }
-    
+
 }
