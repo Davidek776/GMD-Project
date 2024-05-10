@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7961160090131050229}
   - component: {fileID: 7961160090131050227}
   - component: {fileID: 7961160090131050228}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Leg_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -116,7 +116,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7961160090255264769}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: bone_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -149,7 +149,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7961160090506721070}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: bone_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -182,7 +182,7 @@ GameObject:
   - component: {fileID: 7961160090647232813}
   - component: {fileID: 7961160090647232812}
   - component: {fileID: 7961160090647232811}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -290,7 +290,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7961160090670292747}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: bone_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -323,7 +323,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7961160090774948562}
   - component: {fileID: 7961160090774948561}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Eye_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -406,7 +406,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7961160090797404086}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: bone_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -437,7 +437,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7961160090874292559}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: bone_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -472,7 +472,7 @@ GameObject:
   - component: {fileID: 4581336930651583705}
   - component: {fileID: 4355256476756165907}
   - component: {fileID: 2252963505846771960}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Enemy_Runner_S
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -602,6 +602,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4749ade849b4415588e8b9f3057c6be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pointA: {fileID: 0}
+  pointB: {fileID: 0}
+  speed: 0
 --- !u!1 &7961160091793601460
 GameObject:
   m_ObjectHideFlags: 0
@@ -613,7 +616,7 @@ GameObject:
   - component: {fileID: 7961160091793601459}
   - component: {fileID: 7961160091793601457}
   - component: {fileID: 7961160091793601458}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Leg_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -718,7 +721,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7961160091805414151}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: bone_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -749,7 +752,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7961160091823583474}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: bone_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -782,7 +785,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7961160091919472256}
   - component: {fileID: 7961160091919472271}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Eye_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
