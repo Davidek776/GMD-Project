@@ -17,6 +17,10 @@ public class Respawn : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        if (collision.CompareTag("Checkpoint")){
+            UpdateStartPos(transform.position);
+        }
+
         if (collision.CompareTag("DeadZone"))
         {
             Die(0f);
@@ -40,5 +44,10 @@ public class Respawn : MonoBehaviour
         animator.SetBool("isDead", false);
         transform.position = startPos;
         canMove = true;
+    }
+
+    public void UpdateStartPos(Vector2 newStartPos)
+    {
+        startPos = newStartPos;
     }
 }
