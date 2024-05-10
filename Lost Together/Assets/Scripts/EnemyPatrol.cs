@@ -107,4 +107,11 @@ private GameObject FindClosestPlayer(List<GameObject> players)
         return player.transform.position.x >= Mathf.Min(pointA.position.x, pointB.position.x)
             && player.transform.position.x <= Mathf.Max(pointA.position.x, pointB.position.x);
     }
+
+      private void OnDrawGizmos(){
+        Gizmos.DrawWireSphere(pointA.transform.position, 0.5f);
+        Gizmos.DrawWireSphere(pointA.transform.position, 0.5f);
+        Gizmos.DrawLine(pointA.transform.position, pointB.transform.position);
+    }
+    
 }
