@@ -473,6 +473,7 @@ GameObject:
   - component: {fileID: 192006020237163238}
   - component: {fileID: 5850253323022614091}
   - component: {fileID: 5595951703331352443}
+  - component: {fileID: 2476611972420330216}
   m_Layer: 0
   m_Name: Enemy_Runner_S
   m_TagString: Enemy
@@ -596,7 +597,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0.01, y: -0.1}
   serializedVersion: 2
-  m_Radius: 0.67
+  m_Radius: 0.61
 --- !u!61 &5595951703331352443
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -642,6 +643,41 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.82, y: 1.06}
   m_EdgeRadius: 0
+--- !u!58 &2476611972420330216
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7961160090875915830}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.01, y: -0.1}
+  serializedVersion: 2
+  m_Radius: 0.69
 --- !u!1 &7961160091793601460
 GameObject:
   m_ObjectHideFlags: 0
