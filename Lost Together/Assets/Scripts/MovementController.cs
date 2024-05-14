@@ -16,7 +16,7 @@ public class MovementController : MonoBehaviour
     public Transform groundCheck;
 
     private Animator animator;
-    
+        
     private Respawn respawn;
     private ControlsHint controlsHint;
     private CharacterFXPlayer characterFXPlayer;
