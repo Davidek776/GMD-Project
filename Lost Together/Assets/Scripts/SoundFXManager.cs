@@ -12,9 +12,9 @@ public class SoundFXManager : MonoBehaviour
     [SerializeField] private AudioClip buttonClickSound;
 
     [Header("Volumes")]
-    [SerializeField] private float jumpVolume = 0.75f;
-    [SerializeField] private float runningVolume = 1f;
-    [SerializeField] private float buttonVolume = 0.25f;
+    [Range(0, 1)][SerializeField] private float jumpVolume = 0.75f;
+    [Range(0, 1)][SerializeField] private float runningVolume = 1f;
+    [Range(0, 1)][SerializeField] private float buttonVolume = 0.25f;
 
     private AudioSource jumpAudioSourcePlayer1;
     private AudioSource jumpAudioSourcePlayer2;
