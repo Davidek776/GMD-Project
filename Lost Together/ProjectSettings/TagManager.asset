@@ -12,7 +12,10 @@ TagManager:
   - Player2ControlsHint
   - Player1ControlsHint
   - InGameCanvas
+  - Enemy
   - Checkpoint
+  - JoinInstructions
+  - PlayerControls
   layers:
   - Default
   - TransparentFX

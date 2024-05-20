@@ -25,12 +25,14 @@ public class Respawn : MonoBehaviour
         {
             Die(0f);
         }
-        else if (collision.CompareTag("Spike"))
+
+        else if (collision.CompareTag("Spike") || collision.CompareTag("Enemy"))
         {
             animator.SetBool("isDead", true);
             Die(0.5f);
         }
     }
+    
 
     private void Die(float respawnDuration)
     {
