@@ -1267,8 +1267,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   soundFXObject: {fileID: 7997598291953565152, guid: ff2c6ae5a533543e09c2a0022b2b36be, type: 3}
-  buttonSelectSound: {fileID: 8300000, guid: ba8fc98df907d4b51be225dd23e53c64, type: 3}
-  buttonClickSound: {fileID: 8300000, guid: ba8fc98df907d4b51be225dd23e53c64, type: 3}
+  buttonSelectSound: {fileID: 8300000, guid: 78296c9129f6c4bbfaf9b8c877d08e46, type: 3}
+  buttonClickSound: {fileID: 8300000, guid: 99656e64310b54b818af5fff4b1a2349, type: 3}
 --- !u!4 &581146170
 Transform:
   m_ObjectHideFlags: 0
