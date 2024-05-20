@@ -6,6 +6,7 @@ public class SoundFXManager : MonoBehaviour
 {
     public static SoundFXManager instance;
     [SerializeField] private AudioSource soundFXObject;
+    [SerializeField] private AudioClip buttonSelectSound;
     private AudioSource audioSource;
 
     private void Awake()
@@ -46,5 +47,10 @@ public class SoundFXManager : MonoBehaviour
         float clipLength = audioSource.clip.length;
 
         Destroy(audioSource.gameObject, clipLength);
+    }
+
+    public void PlayButtonSelectSound()
+    {
+        PlaySound(buttonSelectSound, soundFXObject.transform, 1f);
     }
 }
