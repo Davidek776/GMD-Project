@@ -5,15 +5,21 @@ using UnityEngine;
 public class SoundFXManager : MonoBehaviour
 {
     public static SoundFXManager instance;
+
+    [Header("Sound FX Objects")]
     [SerializeField] private AudioSource soundFXObject;
     [SerializeField] private AudioClip buttonSelectSound;
     [SerializeField] private AudioClip buttonClickSound;
+
+    [Header("Volumes")]
+    [SerializeField] private float jumpVolume = 0.75f;
+    [SerializeField] private float runningVolume = 1f;
+    [SerializeField] private float buttonVolume = 0.25f;
+
     private AudioSource jumpAudioSourcePlayer1;
     private AudioSource jumpAudioSourcePlayer2;
-
     private AudioSource runningAudioSourcePlayer1;
     private AudioSource runningAudioSourcePlayer2;
-
     private AudioSource buttonAudioSource;
 
     private void Awake()
@@ -36,14 +42,16 @@ public class SoundFXManager : MonoBehaviour
         Destroy(audioSource.gameObject, clipLength);
     }
 
-    public void PlayJumpSound(AudioClip clip, Transform spawnTransform, float volume, int playerIndex){
+    public void PlayJumpSound(AudioClip clip, Transform spawnTransform, int playerIndex)
+    {
         if (playerIndex == 0)
-            PlayJumpSoundPlayer1(clip, spawnTransform, volume);
+            PlayJumpSoundPlayer1(clip, spawnTransform, jumpVolume);
         else
-            PlayJumpSoundPlayer2(clip, spawnTransform, volume);
+            PlayJumpSoundPlayer2(clip, spawnTransform, jumpVolume);
     }
 
-    private void PlayJumpSoundPlayer1(AudioClip clip, Transform spawnTransform, float volume){
+    private void PlayJumpSoundPlayer1(AudioClip clip, Transform spawnTransform, float volume)
+    {
         if (jumpAudioSourcePlayer1 != null)
             return;
 
@@ -57,7 +65,8 @@ public class SoundFXManager : MonoBehaviour
         Destroy(jumpAudioSourcePlayer1.gameObject, clipLength);
     }
 
-    private void PlayJumpSoundPlayer2(AudioClip clip, Transform spawnTransform, float volume){
+    private void PlayJumpSoundPlayer2(AudioClip clip, Transform spawnTransform, float volume)
+    {
         if (jumpAudioSourcePlayer2 != null)
             return;
 
@@ -71,14 +80,16 @@ public class SoundFXManager : MonoBehaviour
         Destroy(jumpAudioSourcePlayer2.gameObject, clipLength);
     }
 
-    public void PlayRandomRunningSound(AudioClip[] clip, Transform spawnTransform, float volume, int playerIndex){
+    public void PlayRandomRunningSound(AudioClip[] clip, Transform spawnTransform, int playerIndex)
+    {
         if (playerIndex == 0)
-            PlayRandomRunningSoundPlayer1(clip, spawnTransform, volume);
+            PlayRandomRunningSoundPlayer1(clip, spawnTransform, runningVolume);
         else
-            PlayRandomRunningSoundPlayer2(clip, spawnTransform, volume);
+            PlayRandomRunningSoundPlayer2(clip, spawnTransform, runningVolume);
     }
 
-    private void PlayRandomRunningSoundPlayer1(AudioClip[] clip, Transform spawnTransform, float volume){
+    private void PlayRandomRunningSoundPlayer1(AudioClip[] clip, Transform spawnTransform, float volume)
+    {
         if (runningAudioSourcePlayer1 != null)
             return;
 
@@ -92,7 +103,8 @@ public class SoundFXManager : MonoBehaviour
         Destroy(runningAudioSourcePlayer1.gameObject, clipLength);
     }
 
-    private void PlayRandomRunningSoundPlayer2(AudioClip[] clip, Transform spawnTransform, float volume){
+    private void PlayRandomRunningSoundPlayer2(AudioClip[] clip, Transform spawnTransform, float volume)
+    {
         if (runningAudioSourcePlayer2 != null)
             return;
 
@@ -106,14 +118,14 @@ public class SoundFXManager : MonoBehaviour
         Destroy(runningAudioSourcePlayer2.gameObject, clipLength);
     }
 
-    
+
     public void PlayButtonSelectSound()
     {
-        PlaySound(buttonAudioSource, buttonSelectSound, soundFXObject.transform, 0.25f);
+        PlaySound(buttonAudioSource, buttonSelectSound, soundFXObject.transform, buttonVolume);
     }
 
     public void PlayButtonClickSound()
     {
-        PlaySound(buttonAudioSource, buttonClickSound, soundFXObject.transform, 0.25f);
+        PlaySound(buttonAudioSource, buttonClickSound, soundFXObject.transform, buttonVolume);
     }
 }
