@@ -5,9 +5,15 @@ using UnityEngine;
 public class CharacterFXPlayer : MonoBehaviour
 {
     [SerializeField] private AudioClip jumpSound;
+    [SerializeField] private AudioClip[] runningSounds;
 
-    public void PlayJumpSound(Transform spawnTransform)
+    public void PlayJumpSound(Transform spawnTransform, int playerIndex)
     {
-        SoundFXManager.instance.PlaySound(jumpSound, spawnTransform, 0.5f);
+        SoundFXManager.instance.PlayJumpSound(jumpSound, spawnTransform, playerIndex);
+    }
+
+    public void PlayRunningSound(Transform spawnTransform, int playerIndex)
+    {
+        SoundFXManager.instance.PlayRandomRunningSound(runningSounds, spawnTransform, playerIndex);
     }
 }

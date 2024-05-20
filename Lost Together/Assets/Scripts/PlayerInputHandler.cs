@@ -14,7 +14,7 @@ public class PlayerInputHandler : MonoBehaviour
         playerInput = GetComponent<PlayerInput>();
         var movers = FindObjectsOfType<MovementController>();
         var index = playerInput.playerIndex;
-        movementController = movers.FirstOrDefault(m => m.playerIndex == index);
+        movementController = movers.FirstOrDefault(m => m.GetPlayerIndex() == index);
     }
 
     // Update is called once per frame
