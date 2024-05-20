@@ -109,11 +109,11 @@ public class SoundFXManager : MonoBehaviour
     
     public void PlayButtonSelectSound()
     {
-        PlaySound(buttonAudioSource, buttonSelectSound, soundFXObject.transform, 0.5f);
+        PlaySound(buttonAudioSource, buttonSelectSound, soundFXObject.transform, 0.25f);
     }
 
     public void PlayButtonClickSound()
     {
-        PlaySound(buttonAudioSource, buttonClickSound, soundFXObject.transform, 0.5f);
+        PlaySound(buttonAudioSource, buttonClickSound, soundFXObject.transform, 0.25f);
     }
 }

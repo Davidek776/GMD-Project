@@ -9,7 +9,7 @@ public class CharacterFXPlayer : MonoBehaviour
 
     public void PlayJumpSound(Transform spawnTransform, int playerIndex)
     {
-        SoundFXManager.instance.PlayJumpSound(jumpSound, spawnTransform, 1f, playerIndex);
+        SoundFXManager.instance.PlayJumpSound(jumpSound, spawnTransform, 0.75f, playerIndex);
     }
 
     public void PlayRunningSound(Transform spawnTransform, int playerIndex)
