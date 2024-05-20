@@ -14,6 +14,6 @@ public class CharacterFXPlayer : MonoBehaviour
 
     public void PlayRunningSound(Transform spawnTransform, int playerIndex)
     {
-        SoundFXManager.instance.PlayRandomRunningSound(runningSounds, spawnTransform, 0.25f, playerIndex);
+        SoundFXManager.instance.PlayRandomRunningSound(runningSounds, spawnTransform, 1f, playerIndex);
     }
 }
