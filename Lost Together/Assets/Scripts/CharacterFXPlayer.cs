@@ -8,6 +8,6 @@ public class CharacterFXPlayer : MonoBehaviour
 
     public void PlayJumpSound(Transform spawnTransform)
     {
-        SoundFXManager.instance.PlaySound(jumpSound, spawnTransform, 0.5f);
+        SoundFXManager.instance.PlayJumpSound(jumpSound, spawnTransform, 0.5f);
     }
 }
