@@ -16,13 +16,14 @@ public class MovementController : MonoBehaviour
     public Transform groundCheck;
 
     private Animator animator;
-    
+
     private Respawn respawn;
     private ControlsHint controlsHint;
     private CharacterFXPlayer characterFXPlayer;
-    public int playerIndex = 0;
+    private int playerIndex = 0;
 
-    void Start(){
+    void Start()
+    {
         animator = GetComponent<Animator>();
         respawn = GetComponent<Respawn>();
         rb = GetComponent<Rigidbody2D>();
@@ -30,25 +31,38 @@ public class MovementController : MonoBehaviour
         characterFXPlayer = GetComponent<CharacterFXPlayer>();
 
         if (gameObject.CompareTag("Player1"))
+        {
             jumpPower = 8.0f;
+            playerIndex = 0;
+        }
         else
+        {
             jumpPower = 12.0f;
+            playerIndex = 1;
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(respawn.canMove)
+        if (!jumpCanceled)
+        {
+            Jump();
+        }
+
+        if (respawn.canMove)
+        {
+            if (horizontalInput != 0 && isGrounded())
+                characterFXPlayer.PlayRunningSound(transform, GetPlayerIndex());
+
             rb.velocity = new Vector2(horizontalInput * speed, rb.velocity.y);
+        }
         else
             rb.velocity = new Vector2(0, rb.velocity.y);
 
         animator.SetFloat("xVelocity", Math.Abs(rb.velocity.x));
         animator.SetFloat("yVelocity", rb.velocity.y);
 
-        if(!jumpCanceled){
-            Jump();
-        }
 
         Flip();
     }
@@ -73,7 +87,7 @@ public class MovementController : MonoBehaviour
     {
         horizontalInput = input;
 
-        if(!controlsHint.hintDisabled && input != 0)
+        if (!controlsHint.hintDisabled && input != 0)
             controlsHint.DisableHint();
     }
 
@@ -89,11 +103,12 @@ public class MovementController : MonoBehaviour
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpPower);
             animator.SetBool("isJumping", true);
-            characterFXPlayer.PlayJumpSound(transform);
+            characterFXPlayer.PlayJumpSound(transform, GetPlayerIndex());
         }
     }
 
-    public void StopJump(){
+    public void StopJump()
+    {
         jumpCanceled = true;
     }
 
@@ -108,7 +123,7 @@ public class MovementController : MonoBehaviour
     public int GetPlayerIndex()
     {
         return playerIndex;
-    } 
+    }
 
     public bool IsFacingRight()
     {
