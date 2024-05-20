@@ -40,7 +40,9 @@ public class PauseMenu : MonoBehaviour
 
     public void ResumeGame()
     {
-        pauseMenu.SetActive(false);
+        if(pauseMenu.activeSelf == true)
+            HidePauseMenu();
+            
         Time.timeScale = 1f;
         isGamePaused = false;
 
@@ -65,6 +67,14 @@ public class PauseMenu : MonoBehaviour
             player1.GetComponent<MovementController>().enabled = false;
             player2.GetComponent<MovementController>().enabled = false;
         }
+    }
+
+    public void PauseGameWithoutMenu()
+    {
+        Time.timeScale = 0f;
+        isGamePaused = true;
+        player1.GetComponent<MovementController>().enabled = false;
+        player2.GetComponent<MovementController>().enabled = false;
     }
 
     public void HidePauseMenu()
