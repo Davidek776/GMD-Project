@@ -33,7 +33,7 @@ public class SceneLoader : MonoBehaviour
         SceneManager.LoadScene(sceneIndex);
     }
 
-        public void LoadScene(string sceneName)
+    public void LoadScene(string sceneName)
     {
         StartCoroutine(LoadSceneWithTransition(sceneName));
     }
