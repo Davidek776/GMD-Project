@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 
 public class LevelMenuHandler : MonoBehaviour
@@ -11,7 +12,7 @@ public class LevelMenuHandler : MonoBehaviour
     private GameObject levelMenu
 ;
     [SerializeField]
-    private GameObject optionsFirstButton, optionsCloseButton;
+    private GameObject levelOneButton, levelTwoButton, levelThreeButton;
     [SerializeField]
     private Slider masterVolumeSlider, soundEffectsVolumeSlider, backgroundMusicVolumeSlider;
     private void Awake()
@@ -19,7 +20,7 @@ public class LevelMenuHandler : MonoBehaviour
         if (instance == null)
         {
             instance = this;
-        }
+        }   
     }
 
     // Start is called before the first frame update
@@ -29,21 +30,31 @@ public class LevelMenuHandler : MonoBehaviour
         SetSliderValues();
     }
 
-    public void OpenLevelMenu()
-    {
-        levelMenu.SetActive(true);
+    // public void OpenLevelMenu()
+    // {
+    //     levelMenu.SetActive(true);
 
-        // EventSystem.current.SetSelectedGameObject(null);
-        // EventSystem.current.SetSelectedGameObject(levelFirstButton);
-    }
+    //     EventSystem.current.SetSelectedGameObject(null);
+    //     EventSystem.current.SetSelectedGameObject(levelFirstButton);
+    // }
 
     // public void CloseLevelMenu()
     // {
     //     levelMenu.SetActive(false);
 
     //     EventSystem.current.SetSelectedGameObject(null);
-    //     EventSystem.current.SetSelectedGameObject(levelCloseButton);
+    //     EventSystem.current.SetSelectedGameObject(levelMenuCloseButton);
     // }
+
+        public void PlayLevelOne()
+        {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        }
+
+        // public void PlayLevelTwo()
+        // {
+        // SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 2);
+        // }
 
     private void SetSliderValues()
     {
