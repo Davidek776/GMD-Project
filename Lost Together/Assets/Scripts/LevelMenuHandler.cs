@@ -30,13 +30,13 @@ public class LevelMenuHandler : MonoBehaviour
         SetSliderValues();
     }
 
-    // public void OpenLevelMenu()
-    // {
-    //     levelMenu.SetActive(true);
+    public void OpenLevelMenu()
+    {
+        levelMenu.SetActive(true);
 
-    //     EventSystem.current.SetSelectedGameObject(null);
-    //     EventSystem.current.SetSelectedGameObject(levelFirstButton);
-    // }
+        EventSystem.current.SetSelectedGameObject(null);
+        EventSystem.current.SetSelectedGameObject(levelOneButton);
+    }
 
     // public void CloseLevelMenu()
     // {
