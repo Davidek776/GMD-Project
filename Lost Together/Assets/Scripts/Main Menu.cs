@@ -25,11 +25,6 @@ public class MainMenu : MonoBehaviour
         mainMenu.SetActive(false);
     }
 
-    public void PlayGame()
-    {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-    }
-
     public void QuitGame()
     {
         Application.Quit();
