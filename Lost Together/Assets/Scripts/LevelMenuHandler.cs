@@ -12,7 +12,7 @@ public class LevelMenuHandler : MonoBehaviour
     private GameObject levelMenu
 ;
     [SerializeField]
-    private GameObject levelOneButton, levelTwoButton, levelThreeButton;
+    private GameObject levelOneButton, levelTwoButton, levelThreeButton, playButton;
     [SerializeField]
     private void Awake()
     {
@@ -31,13 +31,24 @@ public class LevelMenuHandler : MonoBehaviour
     public void OpenLevelMenu()
     {
         levelMenu.SetActive(true);
-
         EventSystem.current.SetSelectedGameObject(null);
         EventSystem.current.SetSelectedGameObject(levelOneButton);
     }
-    public void PlayLevelOne()
+
+       public void CloseLevelMenu()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        levelMenu.SetActive(false);
+        EventSystem.current.SetSelectedGameObject(null);
+        EventSystem.current.SetSelectedGameObject(playButton);
+    }
+
+      public void PlayLevelOne(){
+        PlayLevel(1);
+      }
+
+    public void PlayLevel(int index)
+    {
+         SceneLoader.instance.LoadScene(SceneManager.GetActiveScene().buildIndex + index);
     }
 
 }
