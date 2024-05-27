@@ -26,13 +26,13 @@ public class GameOverMenu : MonoBehaviour
 
      public void RestartGame()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        SceneLoader.instance.LoadScene(SceneManager.GetActiveScene().buildIndex);
         Time.timeScale = 1f;
         }
 
      public void LoadMenu()
     {
-        SceneManager.LoadScene("Menu");
+        SceneLoader.instance.LoadScene("Menu");
         Time.timeScale = 1f;
     }
 }
