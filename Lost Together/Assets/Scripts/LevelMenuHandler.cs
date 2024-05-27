@@ -37,12 +37,12 @@ public class LevelMenuHandler : MonoBehaviour
     }
     public void PlayLevelOne()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+         SceneLoader.instance.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
      public void PlayLevelTwo()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 2);
+        SceneLoader.instance.LoadScene(SceneManager.GetActiveScene().buildIndex + 2);
     }
 
 }
