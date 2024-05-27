@@ -14,20 +14,18 @@ public class LevelMenuHandler : MonoBehaviour
     [SerializeField]
     private GameObject levelOneButton, levelTwoButton, levelThreeButton;
     [SerializeField]
-    private Slider masterVolumeSlider, soundEffectsVolumeSlider, backgroundMusicVolumeSlider;
     private void Awake()
     {
         if (instance == null)
         {
             instance = this;
-        }   
+        }
     }
 
     // Start is called before the first frame update
     void Start()
     {
         levelMenu.SetActive(false);
-        SetSliderValues();
     }
 
     public void OpenLevelMenu()
@@ -37,38 +35,9 @@ public class LevelMenuHandler : MonoBehaviour
         EventSystem.current.SetSelectedGameObject(null);
         EventSystem.current.SetSelectedGameObject(levelOneButton);
     }
-
-    // public void CloseLevelMenu()
-    // {
-    //     levelMenu.SetActive(false);
-
-    //     EventSystem.current.SetSelectedGameObject(null);
-    //     EventSystem.current.SetSelectedGameObject(levelMenuCloseButton);
-    // }
-
-        public void PlayLevelOne()
-        {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-        }
-
-        // public void PlayLevelTwo()
-        // {
-        // SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 2);
-        // }
-
-    private void SetSliderValues()
+    public void PlayLevelOne()
     {
-        if (PlayerPrefs.HasKey("masterVolume"))
-        {
-            masterVolumeSlider.value = PlayerPrefs.GetFloat("masterVolume");
-        }
-        if (PlayerPrefs.HasKey("soundEffectsVolume"))
-        {
-            soundEffectsVolumeSlider.value = PlayerPrefs.GetFloat("soundEffectsVolume");
-        }
-        if (PlayerPrefs.HasKey("backgroundMusicVolume"))
-        {
-            backgroundMusicVolumeSlider.value = PlayerPrefs.GetFloat("backgroundMusicVolume");
-        }
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
+
 }
