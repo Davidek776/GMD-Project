@@ -30,8 +30,7 @@
    - Update design document
   
    #### 27.05.-04.06
-   - Some things we might identify during the previous weeks
-   - Loading Screen?
-   - Custom game icon?
-   - Create a demo
-   - Start on stuff for final hand-in
+   - Create a demo (2 min YT video)
+   - Create final blog
+   - Edit README to contain all stuf that is needed
+   - Create a new branch for WebGL hosting
