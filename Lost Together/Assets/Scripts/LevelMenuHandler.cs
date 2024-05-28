@@ -48,7 +48,7 @@ public class LevelMenuHandler : MonoBehaviour
 
     public void PlayLevel(int index)
     {
-         SceneLoader.instance.LoadScene(SceneManager.GetActiveScene().buildIndex + index);
+         SceneLoader.instance.LoadScene(index);
     }
 
 }
