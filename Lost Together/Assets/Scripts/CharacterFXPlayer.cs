@@ -4,16 +4,22 @@ using UnityEngine;
 
 public class CharacterFXPlayer : MonoBehaviour
 {
-    [SerializeField] private AudioClip jumpSound;
+    [SerializeField] private AudioClip[] jumpSounds;
     [SerializeField] private AudioClip[] runningSounds;
+    [SerializeField] private AudioClip[] deathSounds;
 
     public void PlayJumpSound(Transform spawnTransform, int playerIndex)
     {
-        SoundFXManager.instance.PlayJumpSound(jumpSound, spawnTransform, playerIndex);
+        SoundFXManager.instance.PlayRandomJumpSound(jumpSounds, spawnTransform, playerIndex);
     }
 
     public void PlayRunningSound(Transform spawnTransform, int playerIndex)
     {
         SoundFXManager.instance.PlayRandomRunningSound(runningSounds, spawnTransform, playerIndex);
+    }
+
+    public void PlayDeathSound(Transform spawnTransform, int playerIndex)
+    {
+        SoundFXManager.instance.PlayRandomDeathSound(deathSounds, spawnTransform, playerIndex);
     }
 }

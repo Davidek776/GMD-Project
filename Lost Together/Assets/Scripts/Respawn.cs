@@ -6,6 +6,8 @@ public class Respawn : MonoBehaviour
 
     private Vector2 startPos;
     private Animator animator;
+    private CharacterFXPlayer characterFXPlayer;
+    private MovementController movementController;
     public bool canMove = true;
 
     // Start is called before the first frame update
@@ -13,6 +15,8 @@ public class Respawn : MonoBehaviour
     {
         startPos = transform.position;
         animator = GetComponent<Animator>();
+        characterFXPlayer = GetComponent<CharacterFXPlayer>();
+        movementController = GetComponent<MovementController>();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -30,6 +34,7 @@ public class Respawn : MonoBehaviour
         {
             animator.SetBool("isDead", true);
             Die(0.5f);
+            characterFXPlayer.PlayDeathSound(transform, movementController.GetPlayerIndex());
         }
     }
     

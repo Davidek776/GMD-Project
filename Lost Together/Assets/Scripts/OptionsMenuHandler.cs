@@ -32,7 +32,6 @@ public class OptionsMenuHandler : MonoBehaviour
     public void OpenOptionsMenu()
     {
         optionsMenu.SetActive(true);
-
         EventSystem.current.SetSelectedGameObject(null);
         EventSystem.current.SetSelectedGameObject(optionsFirstButton);
     }
@@ -40,7 +39,6 @@ public class OptionsMenuHandler : MonoBehaviour
     public void CloseOptionsMenu()
     {
         optionsMenu.SetActive(false);
-
         EventSystem.current.SetSelectedGameObject(null);
         EventSystem.current.SetSelectedGameObject(optionsCloseButton);
     }

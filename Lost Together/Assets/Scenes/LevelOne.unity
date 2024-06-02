@@ -25531,7 +25531,7 @@ Transform:
   m_GameObject: {fileID: 2147156113}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -29.84, y: 3.5, z: -0.07150003}
+  m_LocalPosition: {x: -29.9, y: 3.58, z: -0.07150003}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -25820,9 +25820,25 @@ PrefabInstance:
     m_TransformParent: {fileID: 2147156114}
     m_Modifications:
     - target: {fileID: 577572104511001175, guid: 4f86ed38da7064ff98419561027d5e8b, type: 3}
+      propertyPath: jumpSounds.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 577572104511001175, guid: 4f86ed38da7064ff98419561027d5e8b, type: 3}
+      propertyPath: deathSounds.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 577572104511001175, guid: 4f86ed38da7064ff98419561027d5e8b, type: 3}
+      propertyPath: jumpSounds.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: f2c17a98b0c294e1ab429886613caba3, type: 3}
+    - target: {fileID: 577572104511001175, guid: 4f86ed38da7064ff98419561027d5e8b, type: 3}
       propertyPath: runningSounds.Array.size
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 577572104511001175, guid: 4f86ed38da7064ff98419561027d5e8b, type: 3}
+      propertyPath: deathSounds.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 88763a9a8fb9a40c78b56e6a47daa55e, type: 3}
     - target: {fileID: 577572104511001175, guid: 4f86ed38da7064ff98419561027d5e8b, type: 3}
       propertyPath: runningSounds.Array.data[0]
       value: 
@@ -26266,9 +26282,25 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 968376688}
     - target: {fileID: 3343589932729131096, guid: 57477c4109c674e3b9f7c5429f71df85, type: 3}
+      propertyPath: jumpSounds.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3343589932729131096, guid: 57477c4109c674e3b9f7c5429f71df85, type: 3}
+      propertyPath: deathSounds.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3343589932729131096, guid: 57477c4109c674e3b9f7c5429f71df85, type: 3}
+      propertyPath: jumpSounds.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 41a9fa7ba38ee486cb4d6c9e3650c89a, type: 3}
+    - target: {fileID: 3343589932729131096, guid: 57477c4109c674e3b9f7c5429f71df85, type: 3}
       propertyPath: runningSounds.Array.size
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 3343589932729131096, guid: 57477c4109c674e3b9f7c5429f71df85, type: 3}
+      propertyPath: deathSounds.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 7b5aafba70f084065bbe1708a87a69f2, type: 3}
     - target: {fileID: 3343589932729131096, guid: 57477c4109c674e3b9f7c5429f71df85, type: 3}
       propertyPath: runningSounds.Array.data[0]
       value: 
