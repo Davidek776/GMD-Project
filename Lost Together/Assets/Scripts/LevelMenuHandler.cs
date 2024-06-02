@@ -35,20 +35,26 @@ public class LevelMenuHandler : MonoBehaviour
         EventSystem.current.SetSelectedGameObject(levelOneButton);
     }
 
-       public void CloseLevelMenu()
+    public void CloseLevelMenu()
     {
         levelMenu.SetActive(false);
         EventSystem.current.SetSelectedGameObject(null);
         EventSystem.current.SetSelectedGameObject(playButton);
     }
 
-      public void PlayLevelOne(){
+    public void PlayLevelOne()
+    {
         PlayLevel(1);
-      }
+    }
+
+    public void PlayLevelTwo()
+    {
+        PlayLevel(2);
+    }
 
     public void PlayLevel(int index)
     {
-         SceneLoader.instance.LoadScene(index);
+        SceneLoader.instance.LoadScene(index);
     }
 
 }
