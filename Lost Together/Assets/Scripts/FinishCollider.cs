@@ -35,10 +35,12 @@ public class FinishCollider : MonoBehaviour
         if (collision.gameObject.name == "Player1")
         {
             playerOneFinished = false;
+            helpTextOne.Hide();
         }
         if (collision.gameObject.name == "Player2")
         {
             playerTwoFinished = false;
+            helpTextTwo.Hide();
         }
     }
 }
