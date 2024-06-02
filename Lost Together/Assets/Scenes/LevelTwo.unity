@@ -194,6 +194,14 @@ PrefabInstance:
     m_TransformParent: {fileID: 2075465681}
     m_Modifications:
     - target: {fileID: 577572104511001175, guid: 4f86ed38da7064ff98419561027d5e8b, type: 3}
+      propertyPath: jumpSounds.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 577572104511001175, guid: 4f86ed38da7064ff98419561027d5e8b, type: 3}
+      propertyPath: jumpSounds.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: f2c17a98b0c294e1ab429886613caba3, type: 3}
+    - target: {fileID: 577572104511001175, guid: 4f86ed38da7064ff98419561027d5e8b, type: 3}
       propertyPath: runningSounds.Array.size
       value: 6
       objectReference: {fileID: 0}
@@ -497,7 +505,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 196270496}
+        - m_Target: {fileID: 0}
           m_TargetAssemblyTypeName: SoundFXManager, Assembly-CSharp
           m_MethodName: PlayButtonSelectSound
           m_Mode: 1
@@ -513,7 +521,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 196270496}
+        - m_Target: {fileID: 0}
           m_TargetAssemblyTypeName: SoundFXManager, Assembly-CSharp
           m_MethodName: PlayButtonClickSound
           m_Mode: 1
@@ -1398,6 +1406,57 @@ Transform:
   - {fileID: 685955059}
   - {fileID: 1123375166}
   m_Father: {fileID: 1929972335}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &94846192
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 94846194}
+  - component: {fileID: 94846193}
+  m_Layer: 0
+  m_Name: SoundFxManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &94846193
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 94846192}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a985b52267cc4906b27267e8b0c5cf0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundFXObject: {fileID: 7997598291953565152, guid: ff2c6ae5a533543e09c2a0022b2b36be, type: 3}
+  buttonSelectSound: {fileID: 8300000, guid: 78296c9129f6c4bbfaf9b8c877d08e46, type: 3}
+  buttonClickSound: {fileID: 8300000, guid: 99656e64310b54b818af5fff4b1a2349, type: 3}
+  jumpVolume: 0.75
+  deathVolume: 0.75
+  runningVolume: 1
+  buttonVolume: 0.25
+--- !u!4 &94846194
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 94846192}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 7.064646, y: -3.3595967, z: 0.7274573}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &101286649
 GameObject:
@@ -2305,7 +2364,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 196270496}
+        - m_Target: {fileID: 0}
           m_TargetAssemblyTypeName: SoundFXManager, Assembly-CSharp
           m_MethodName: PlayButtonSelectSound
           m_Mode: 1
@@ -2321,7 +2380,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 196270496}
+        - m_Target: {fileID: 0}
           m_TargetAssemblyTypeName: SoundFXManager, Assembly-CSharp
           m_MethodName: PlayButtonClickSound
           m_Mode: 1
@@ -2764,56 +2823,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 61cbbce0d4aac49ceb4b1c455ca52f4a, type: 3}
---- !u!1 &196270495
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 196270497}
-  - component: {fileID: 196270496}
-  m_Layer: 0
-  m_Name: SoundFXManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &196270496
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 196270495}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1a985b52267cc4906b27267e8b0c5cf0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  soundFXObject: {fileID: 7997598291953565152, guid: ff2c6ae5a533543e09c2a0022b2b36be, type: 3}
-  buttonSelectSound: {fileID: 8300000, guid: 78296c9129f6c4bbfaf9b8c877d08e46, type: 3}
-  buttonClickSound: {fileID: 8300000, guid: 99656e64310b54b818af5fff4b1a2349, type: 3}
-  jumpVolume: 0.75
-  runningVolume: 1
-  buttonVolume: 0.25
---- !u!4 &196270497
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 196270495}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 2.9613223, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1929972335}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &198153307
 GameObject:
   m_ObjectHideFlags: 0
@@ -4478,7 +4487,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 196270496}
+        - m_Target: {fileID: 0}
           m_TargetAssemblyTypeName: SoundFXManager, Assembly-CSharp
           m_MethodName: PlayButtonSelectSound
           m_Mode: 1
@@ -4494,7 +4503,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 196270496}
+        - m_Target: {fileID: 0}
           m_TargetAssemblyTypeName: SoundFXManager, Assembly-CSharp
           m_MethodName: PlayButtonClickSound
           m_Mode: 1
@@ -5062,7 +5071,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 196270496}
+        - m_Target: {fileID: 0}
           m_TargetAssemblyTypeName: SoundFXManager, Assembly-CSharp
           m_MethodName: PlayButtonSelectSound
           m_Mode: 1
@@ -5078,7 +5087,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 196270496}
+        - m_Target: {fileID: 0}
           m_TargetAssemblyTypeName: SoundFXManager, Assembly-CSharp
           m_MethodName: PlayButtonClickSound
           m_Mode: 1
@@ -6629,7 +6638,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 196270496}
+        - m_Target: {fileID: 0}
           m_TargetAssemblyTypeName: SoundFXManager, Assembly-CSharp
           m_MethodName: PlayButtonSelectSound
           m_Mode: 1
@@ -6645,7 +6654,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 196270496}
+        - m_Target: {fileID: 0}
           m_TargetAssemblyTypeName: SoundFXManager, Assembly-CSharp
           m_MethodName: PlayButtonClickSound
           m_Mode: 1
@@ -7266,7 +7275,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 196270496}
+        - m_Target: {fileID: 0}
           m_TargetAssemblyTypeName: SoundFXManager, Assembly-CSharp
           m_MethodName: PlayButtonSelectSound
           m_Mode: 1
@@ -7282,7 +7291,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 196270496}
+        - m_Target: {fileID: 0}
           m_TargetAssemblyTypeName: SoundFXManager, Assembly-CSharp
           m_MethodName: PlayButtonClickSound
           m_Mode: 1
@@ -8284,11 +8293,11 @@ Transform:
   m_GameObject: {fileID: 584524930}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 2.9613223, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1929972335}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &591060636 stripped
 Transform:
@@ -10411,7 +10420,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 196270496}
+        - m_Target: {fileID: 0}
           m_TargetAssemblyTypeName: SoundFXManager, Assembly-CSharp
           m_MethodName: PlayButtonSelectSound
           m_Mode: 1
@@ -10427,7 +10436,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 196270496}
+        - m_Target: {fileID: 0}
           m_TargetAssemblyTypeName: SoundFXManager, Assembly-CSharp
           m_MethodName: PlayButtonSelectSound
           m_Mode: 1
@@ -11855,7 +11864,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 196270496}
+        - m_Target: {fileID: 0}
           m_TargetAssemblyTypeName: SoundFXManager, Assembly-CSharp
           m_MethodName: PlayButtonSelectSound
           m_Mode: 1
@@ -11871,7 +11880,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 196270496}
+        - m_Target: {fileID: 0}
           m_TargetAssemblyTypeName: SoundFXManager, Assembly-CSharp
           m_MethodName: PlayButtonSelectSound
           m_Mode: 1
@@ -13346,11 +13355,11 @@ Transform:
   m_GameObject: {fileID: 918445861}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.31, y: 9.261322, z: -0.07150003}
+  m_LocalPosition: {x: -2.31, y: 6.2999997, z: -0.07150003}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1929972335}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &918445864
 MonoBehaviour:
@@ -22175,6 +22184,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 968376688}
     - target: {fileID: 3343589932729131096, guid: 57477c4109c674e3b9f7c5429f71df85, type: 3}
+      propertyPath: jumpSounds.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3343589932729131096, guid: 57477c4109c674e3b9f7c5429f71df85, type: 3}
+      propertyPath: jumpSounds.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 41a9fa7ba38ee486cb4d6c9e3650c89a, type: 3}
+    - target: {fileID: 3343589932729131096, guid: 57477c4109c674e3b9f7c5429f71df85, type: 3}
       propertyPath: runningSounds.Array.size
       value: 6
       objectReference: {fileID: 0}
@@ -22446,7 +22463,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 196270496}
+        - m_Target: {fileID: 0}
           m_TargetAssemblyTypeName: SoundFXManager, Assembly-CSharp
           m_MethodName: PlayButtonSelectSound
           m_Mode: 1
@@ -22462,7 +22479,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 196270496}
+        - m_Target: {fileID: 0}
           m_TargetAssemblyTypeName: SoundFXManager, Assembly-CSharp
           m_MethodName: PlayButtonClickSound
           m_Mode: 1
@@ -25710,7 +25727,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 196270496}
+        - m_Target: {fileID: 0}
           m_TargetAssemblyTypeName: SoundFXManager, Assembly-CSharp
           m_MethodName: PlayButtonSelectSound
           m_Mode: 1
@@ -25726,7 +25743,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 196270496}
+        - m_Target: {fileID: 0}
           m_TargetAssemblyTypeName: SoundFXManager, Assembly-CSharp
           m_MethodName: PlayButtonSelectSound
           m_Mode: 1
@@ -27437,9 +27454,6 @@ Transform:
   - {fileID: 1364039955}
   - {fileID: 1202664955}
   - {fileID: 1551493458}
-  - {fileID: 918445863}
-  - {fileID: 196270497}
-  - {fileID: 584524932}
   m_Father: {fileID: 1671616825}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1933179644 stripped
@@ -29844,7 +29858,7 @@ Transform:
   m_GameObject: {fileID: 2075465680}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 52.06, y: -4.52, z: 0}
+  m_LocalPosition: {x: -32.2, y: 12.6, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -31106,3 +31120,6 @@ SceneRoots:
   - {fileID: 2075465681}
   - {fileID: 1242454355}
   - {fileID: 1671616825}
+  - {fileID: 918445863}
+  - {fileID: 584524932}
+  - {fileID: 94846194}
