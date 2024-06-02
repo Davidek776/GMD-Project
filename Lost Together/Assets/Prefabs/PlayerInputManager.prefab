@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3476546700188626943}
   - component: {fileID: 730517988922077313}
+  - component: {fileID: 5593466538414726307}
   m_Layer: 0
   m_Name: PlayerInputManager
   m_TagString: Untagged
@@ -76,3 +77,36 @@ MonoBehaviour:
     y: 0
     width: 1
     height: 1
+--- !u!114 &5593466538414726307
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3028865475899154070}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1306e14b8c5b33d40ad1da45dec8a6aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  players:
+  - name: Left
+    routes:
+    - original: 15
+      remapped: 15
+    - original: 18
+      remapped: 18
+    - original: 37
+      remapped: 37
+    - original: 60
+      remapped: 60
+  - name: Right
+    routes:
+    - original: 15
+      remapped: 61
+    - original: 18
+      remapped: 62
+    - original: 37
+      remapped: 63
+    - original: 60
+      remapped: 60

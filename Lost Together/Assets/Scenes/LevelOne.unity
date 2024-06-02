@@ -2364,6 +2364,7 @@ MonoBehaviour:
   buttonSelectSound: {fileID: 8300000, guid: 78296c9129f6c4bbfaf9b8c877d08e46, type: 3}
   buttonClickSound: {fileID: 8300000, guid: 99656e64310b54b818af5fff4b1a2349, type: 3}
   jumpVolume: 0.75
+  deathVolume: 0.75
   runningVolume: 1
   buttonVolume: 0.25
 --- !u!4 &196270497
