@@ -16,7 +16,6 @@ public class HelpText : MonoBehaviour
     {
         isActive = true;
         gameObject.SetActive(true);
-        Invoke("Hide", 3f);
     }
 
     public void Hide()
