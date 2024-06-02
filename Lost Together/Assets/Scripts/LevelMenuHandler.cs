@@ -52,6 +52,11 @@ public class LevelMenuHandler : MonoBehaviour
         PlayLevel(2);
     }
 
+    public void PlayLevelThree()
+    {
+        PlayLevel(3);
+    }
+
     public void PlayLevel(int index)
     {
         SceneLoader.instance.LoadScene(index);

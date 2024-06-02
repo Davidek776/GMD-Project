@@ -5,7 +5,6 @@ using UnityEngine;
 public class HeavyObject : MonoBehaviour
 {
     private Rigidbody2D rb;
-    private int collisionCount = 0;
     private bool isColliding = false;
 
     private void Start()
@@ -21,7 +20,6 @@ public class HeavyObject : MonoBehaviour
     private void OnCollisionStay2D(Collision2D collision)
     {
         HandleCollision(collision);
-        collisionCount++;
     }
 
     private void OnCollisionExit2D(Collision2D collision)
@@ -32,7 +30,7 @@ public class HeavyObject : MonoBehaviour
         isColliding=false;
     }
 
-    if (collision.gameObject.CompareTag("Ground"))
+    if (collision.gameObject.CompareTag("Ground") || collision.gameObject.CompareTag("Box"))
     {
         rb.bodyType = RigidbodyType2D.Dynamic;
         isColliding=false;

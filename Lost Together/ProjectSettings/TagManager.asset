@@ -16,6 +16,7 @@ TagManager:
   - Checkpoint
   - JoinInstructions
   - PlayerControls
+  - Box
   layers:
   - Default
   - TransparentFX
