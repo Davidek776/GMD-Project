@@ -83,3 +83,6 @@ Movable elements are the main element in the game, that makes two players collab
 Characters' movement can be controlled by using left and right sticks on VIA Arcade Machine or any other Gamepad. Similarly, they can be controlled by using WASD and arrows on the keyboard. For jumping are used green buttons on both sides of the Arcade Machine or south buttons on the Gamepad. On the keyboard is jumping triggered by pressing W or Up Arrow.
 
 ## Conclusion
+Lost Together is a game that combines a 2D multi-layer parallax environment, 2-player collaboration, extensive game levels, enemies, and movable objects controlled by the trigger buttons. Those are game mechanics, dynamics, and aesthetics that are rarely seen together and this makes the game unique. The game contains three levels, and each level gives the player a completely different sensation and gaming experience. Moreover, the game can be played by 2 players by using either a VIA Arcade Machine, gamepads, or keyboard. 
+
+Our Team believes that the Lost Together game has huge potential and players will enjoy it.
