@@ -62,6 +62,11 @@ There are 2 objects that are extremely dangerous for the character - spikes and 
 As shown in the figure 7 above, the enemies have so called <b>patrolling points</b>. The enemy wonders in between those and when a characters steps within the field of those 2 points, the enemy will follow him so watch out!
 
 #### Checkpoints
+The checkpoints in the game are used as a respawner. Once the player reach them, then after the death will be respawn there. There are multiple checkpoints in the game and as the players progrese in the level. The players are always respawned at the position of latest checkpoint, to make sure they are not respawn too far back in the level. In the figure bellow can be seen one of the checkpoints.
+
+<i>Figure 9 - Checkpoint</i>
+<br>
+<img width="200" alt="Light component" src="../Screenshots/Checkpoint.png">
 
 #### Movable elements
 
