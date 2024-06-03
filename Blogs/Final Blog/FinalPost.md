@@ -71,9 +71,13 @@ The checkpoints in the game are used as a respawner. Once the player reach them,
 #### Movable elements
 Movable elements are the main element in the game, that makes two players collaborate with each other. Thanks to them the game is logical, collaborative and challenging. There is a huge amount of movable objects in each level. Each of them can be moved by a trigger button that can be pressed by one of the players. There are multiple types of movable objects such as: movable spike path, elevator, movable ground, etc. All of them can either move horizontally or vertically. In the figure bellow can be seen one of the movable objects that moves verically after pressing the trigger button.
 
-<i>Figure 10 - Movable Object</i>
+<i>Figure 10 - Movable Door</i>
 <br>
 <img width="400" alt="Movable object" src="../Screenshots/MovableElements.png">
+
+<i>Figure 10 - Movable Spike Path</i>
+<br>
+<img width="400" alt="Movable object" src="../Screenshots/MovableSpikePath.png">
 
 ### Character controllers
 
