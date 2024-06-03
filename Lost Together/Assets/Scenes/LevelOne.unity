@@ -1410,7 +1410,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 113.19494}
+  m_AnchoredPosition: {x: 0, y: 97}
   m_SizeDelta: {x: 695.6807, y: 156.1701}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &101286651
@@ -1433,8 +1433,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'To get the best experience from this game, please follow the following 
-    instructions:'
+  m_text: "The following are valid control schemes:\n1. WAD\n2. Arrows \n3. Gamepad
+    (left stick and south button)"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 95e8835c5bcd3443895226c448d1cb50, type: 2}
   m_sharedMaterial: {fileID: 6174060613446318325, guid: 95e8835c5bcd3443895226c448d1cb50, type: 2}
@@ -7898,7 +7898,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &625965254
 RectTransform:
   m_ObjectHideFlags: 0
@@ -13102,7 +13102,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -104.59}
+  m_AnchoredPosition: {x: 0, y: -125}
   m_SizeDelta: {x: 800, y: 93.1352}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1074600035
@@ -13125,7 +13125,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 2. Player on the left, press the GREEN button
+  m_text: 2. Player on the left, press a button of your scheme
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 95e8835c5bcd3443895226c448d1cb50, type: 2}
   m_sharedMaterial: {fileID: 6174060613446318325, guid: 95e8835c5bcd3443895226c448d1cb50, type: 2}
@@ -18832,7 +18832,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -11.4577}
+  m_AnchoredPosition: {x: 0, y: -32}
   m_SizeDelta: {x: 800, y: 93.1352}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1579054689
@@ -18867,7 +18867,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 1. Player on the right, press the GREEN button
+  m_text: 1. Player on the right, press a button of your scheme
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 95e8835c5bcd3443895226c448d1cb50, type: 2}
   m_sharedMaterial: {fileID: 6174060613446318325, guid: 95e8835c5bcd3443895226c448d1cb50, type: 2}
