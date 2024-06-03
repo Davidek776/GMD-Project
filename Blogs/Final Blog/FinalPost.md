@@ -62,14 +62,14 @@ There are 2 objects that are extremely dangerous for the character - spikes and 
 As shown in the figure 7 above, the enemies have so called <b>patrolling points</b>. The enemy wonders in between those and when a characters steps within the field of those 2 points, the enemy will follow him so watch out!
 
 #### Checkpoints
-The checkpoints in the game are used as a respawner. Once the player reaches them, then after the death will respawn there. There are multiple checkpoints in the game as the players progress in the level. The players are always respawned at the position of the latest checkpoint, to make sure they are not respawn too far back in the level. In the figure below can be seen one of the checkpoints.
+The checkpoints in the game are used as a respawner. Once a player reaches them, him respawn position is updated to the place of the checkpoint. There are multiple checkpoints in the game as the players progresses throughout the level. The players are always respawned at the position of the latest checkpoint.
 
 <i>Figure 9 - Checkpoint</i>
 <br>
 <img width="200" alt="Checkpoint" src="../Screenshots/Checkpoint.png">
 
 #### Movable elements
-Movable elements are the main element in the game, that makes two players collaborate with each other. Thanks to them the game is logical, collaborative, and challenging. There is a huge amount of movable objects in each level. Each of them can be moved by a trigger button that can be pressed by one of the players. There are multiple types of movable objects such as movable spike paths, elevators, movable platforms, etc. All of them can either move horizontally or vertically. In the figures, below can be seen examples of movable objects.
+Movable elements are the main element of the game that makes two players collaborate with each other. Thanks to those, the game is logical, collaborative, and challenging. There is a fair amount of movable objects in each level. Each of them can be moved by a trigger button that can be pressed by one of the players (depending on the color of the trigger). There are multiple types of movable objects such as movable spike paths, elevators, movable platforms, etc. All of them can either move horizontally or vertically. Some exaples of the movable objects, together with the trigger buttons, can be seen in the figures below.
 
 <i>Figure 10 - Movable Vertical Door</i>
 <br>
@@ -80,9 +80,7 @@ Movable elements are the main element in the game, that makes two players collab
 <img width="400" alt="Movable Platform" src="../Screenshots/MovableSpikePath.png">
 
 ### Character controllers
-Characters' movement can be controlled by using left and right sticks on VIA Arcade Machine or any other Gamepad. Similarly, they can be controlled by using WASD and arrows on the keyboard. For jumping are used green buttons on both sides of the Arcade Machine or south buttons on the Gamepad. On the keyboard is jumping triggered by pressing W or Up Arrow.
+The game uses the unity's new input system with a few custom modifications as players are already spawned in the scene before button is pressed. There are 2 control schemes that can be used to move the characters: Gamepad and Keybord, where on the keyboard it can either be WAD or Up, Left, Right Arrows. Since the input system only sees a keyboard as one input device, we used the [Keyboard splitter](https://forum.unity.com/threads/keyboard-splitter-local-multiplayer-keyboard.874135/) package from Fenrisul, to make unity think there are multiple and therefore be able to play the game and move 2 separate characters on only one keyboard.
 
 ## Conclusion
-Lost Together is a game that combines a 2D multi-layer parallax environment, 2-player collaboration, extensive game levels, enemies, and movable objects controlled by the trigger buttons. Those are game mechanics, dynamics, and aesthetics that are rarely seen together and this makes the game unique. The game contains three levels, and each level gives the player a completely different sensation and gaming experience. Moreover, the game can be played by 2 players by using either a VIA Arcade Machine, gamepads, or keyboard. 
-
-Our Team believes that the Lost Together game has huge potential and players will enjoy it.
+Overall, Lost Together is a game that combines a 2D multi-layer parallax environment, player collaboration, extensive game levels, enemies, and movable objects controlled by the trigger buttons. The game contains three levels, and each level gives players a completely different sensation and gaming experience. Moreover, the game can be played by 2 players by using either a VIA Arcade Machine or [online](https://davidek776.github.io/GMD-Project/) using gamepads or keyboard. 
