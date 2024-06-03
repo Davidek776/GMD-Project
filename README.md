@@ -1,5 +1,8 @@
 # Lost Together
 
+<details>
+<summary>What will be deleted</summary>
+   
 # Milestones:
 1. 17.03.2024 - Character controllers, Obstacles, Menu, Split Screen
 2. 14.04.2024 - Environment, Triggers, Collaboration logic between characters, Animations, Character sprites
@@ -34,3 +37,26 @@
    - Create final blog
    - Edit README to contain all stuf that is needed
    - Create a new branch for WebGL hosting
+</details>
+
+## WebGL build
+Play [Lost together](https://davidek776.github.io/GMD-Project/)
+
+## YoutTube demo
+[Lost Together demo]()
+
+## Blog Posts
+#### Rollaball
+- [Rollaball Simon](Blogs/Rollaball/Roll-a-ball_Simon.md)
+- [Rollaball David](Blogs/Rollaball/Roll-a-ball_David.md)
+#### Design
+- [Design document](Blogs/Design/DESIGN_DOCUMENT.md)
+#### Development updates
+- [Development blog 1](Blogs/Development%20Updates/Milestone_1.md)
+- [Development blog 2](Blogs/Development%20Updates/Milestone_2.md)
+- [Development blog 3](Blogs/Development%20Updates/Milestone_3.md)
+#### Final blog
+- [Final blog](Blogs/Final%20Blog/FinalPost.md)
+
+## Sources
+
