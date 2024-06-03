@@ -62,23 +62,24 @@ There are 2 objects that are extremely dangerous for the character - spikes and 
 As shown in the figure 7 above, the enemies have so called <b>patrolling points</b>. The enemy wonders in between those and when a characters steps within the field of those 2 points, the enemy will follow him so watch out!
 
 #### Checkpoints
-The checkpoints in the game are used as a respawner. Once the player reach them, then after the death will be respawn there. There are multiple checkpoints in the game and as the players progrese in the level. The players are always respawned at the position of latest checkpoint, to make sure they are not respawn too far back in the level. In the figure bellow can be seen one of the checkpoints.
+The checkpoints in the game are used as a respawner. Once the player reaches them, then after the death will respawn there. There are multiple checkpoints in the game as the players progress in the level. The players are always respawned at the position of the latest checkpoint, to make sure they are not respawn too far back in the level. In the figure below can be seen one of the checkpoints.
 
 <i>Figure 9 - Checkpoint</i>
 <br>
 <img width="200" alt="Checkpoint" src="../Screenshots/Checkpoint.png">
 
 #### Movable elements
-Movable elements are the main element in the game, that makes two players collaborate with each other. Thanks to them the game is logical, collaborative and challenging. There is a huge amount of movable objects in each level. Each of them can be moved by a trigger button that can be pressed by one of the players. There are multiple types of movable objects such as: movable spike path, elevator, movable ground, etc. All of them can either move horizontally or vertically. In the figure bellow can be seen one of the movable objects that moves verically after pressing the trigger button.
+Movable elements are the main element in the game, that makes two players collaborate with each other. Thanks to them the game is logical, collaborative, and challenging. There is a huge amount of movable objects in each level. Each of them can be moved by a trigger button that can be pressed by one of the players. There are multiple types of movable objects such as movable spike paths, elevators, movable platforms, etc. All of them can either move horizontally or vertically. In the figures, below can be seen examples of movable objects.
 
-<i>Figure 10 - Movable Door</i>
+<i>Figure 10 - Movable Vertical Door</i>
 <br>
-<img width="400" alt="Movable object" src="../Screenshots/MovableElements.png">
+<img width="400" alt="Figure 10 " src="../Screenshots/MovableElements.png">
 
-<i>Figure 10 - Movable Spike Path</i>
+<i>Figure 12 - Movable Platform</i>
 <br>
-<img width="400" alt="Movable object" src="../Screenshots/MovableSpikePath.png">
+<img width="400" alt="Movable Platform" src="../Screenshots/MovableSpikePath.png">
 
 ### Character controllers
+Characters' movement can be controlled by using left and right sticks on VIA Arcade Machine or any other Gamepad. Similarly, they can be controlled by using WASD and arrows on the keyboard. For jumping are used green buttons on both sides of the Arcade Machine or south buttons on the Gamepad. On the keyboard is jumping triggered by pressing W or Up Arrow.
 
 ## Conclusion
