@@ -68,5 +68,5 @@ Play [Lost together](https://davidek776.github.io/GMD-Project/)
 - [Sound effects](https://pixabay.com/users/28281460/?tab=all&order=latest&pagi=1)
 - [Background music](https://www.youtube.com/watch?v=HndF_Abg0sI&ab_channel=myheadisempty-Topic)
 - [Juvanze font](https://www.fontspace.com/j-juvanze-font-f112038)
-- [Brackeys YoutTube channel]([Brackeys](https://www.youtube.com/@Brackeys))
+- [Brackeys YoutTube channel](https://www.youtube.com/@Brackeys)
 
