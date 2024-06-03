@@ -1,7 +1,7 @@
 # Lost Together
 
 <details>
-<summary>What will be deleted</summary>
+<summary>Milestones</summary>
    
 # Milestones:
 1. 17.03.2024 - Character controllers, Obstacles, Menu, Split Screen
