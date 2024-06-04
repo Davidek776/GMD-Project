@@ -35,4 +35,19 @@ public class GameOverMenu : MonoBehaviour
         SceneLoader.instance.LoadScene("Menu");
         Time.timeScale = 1f;
     }
+
+    public void NextLevel()
+    {
+        int mexScene = SceneManager.sceneCountInBuildSettings;
+        if (SceneManager.GetActiveScene().buildIndex + 1 < mexScene)
+        {
+            SceneLoader.instance.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        }
+        else
+        {
+            SceneLoader.instance.LoadScene("Menu");
+        }
+
+        Time.timeScale = 1f;
+    }
 }
