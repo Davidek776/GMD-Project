@@ -10,6 +10,9 @@
 /[Ll]ogs/
 /[Uu]ser[Ss]ettings/
 
+#ignore .DS_Store
+.DS_Store
+
 #ignore vscode
 .vscode/
 

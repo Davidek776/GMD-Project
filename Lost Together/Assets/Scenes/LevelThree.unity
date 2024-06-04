@@ -12523,7 +12523,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 101939e5c5835418fb64140d24674fa1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameOverFirstButton: {fileID: 373965605}
+  gameOverFirstButton: {fileID: 1861845775}
   isActive: 0
 --- !u!1 &813566787 stripped
 GameObject:
@@ -28475,7 +28475,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 806616783}
         m_TargetAssemblyTypeName: GameOverMenu, Assembly-CSharp
-        m_MethodName: 
+        m_MethodName: NextLevel
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -31690,7 +31690,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2016915582}
   - component: {fileID: 2016915584}
-  - component: {fileID: 2016915583}
+  - component: {fileID: 2016915585}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -31713,7 +31713,22 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1794323874}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2016915583
+--- !u!114 &2016915584
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2016915581}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_FirstSelected: {fileID: 0}
+  m_sendNavigationEvents: 1
+  m_DragThreshold: 10
+--- !u!114 &2016915585
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -31733,21 +31748,6 @@ MonoBehaviour:
   m_InputActionsPerSecond: 10
   m_RepeatDelay: 0.5
   m_ForceModuleActive: 0
---- !u!114 &2016915584
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2016915581}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_FirstSelected: {fileID: 0}
-  m_sendNavigationEvents: 1
-  m_DragThreshold: 10
 --- !u!1001 &2020236210
 PrefabInstance:
   m_ObjectHideFlags: 0

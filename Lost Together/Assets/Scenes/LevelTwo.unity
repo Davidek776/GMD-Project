@@ -6760,7 +6760,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 828743340}
         m_TargetAssemblyTypeName: GameOverMenu, Assembly-CSharp
-        m_MethodName: 
+        m_MethodName: NextLevel
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -11589,7 +11589,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 101939e5c5835418fb64140d24674fa1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameOverFirstButton: {fileID: 134297597}
+  gameOverFirstButton: {fileID: 507491613}
   isActive: 0
 --- !u!1 &834189134
 GameObject:
@@ -23295,7 +23295,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.000030517578, y: 0.000015258789}
+  m_AnchoredPosition: {x: -0.000030517578, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1604315247
@@ -27804,7 +27804,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1936436678}
   - component: {fileID: 1936436680}
-  - component: {fileID: 1936436679}
+  - component: {fileID: 1936436681}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -27827,7 +27827,22 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2075465681}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1936436679
+--- !u!114 &1936436680
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1936436677}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_FirstSelected: {fileID: 0}
+  m_sendNavigationEvents: 1
+  m_DragThreshold: 10
+--- !u!114 &1936436681
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -27847,21 +27862,6 @@ MonoBehaviour:
   m_InputActionsPerSecond: 10
   m_RepeatDelay: 0.5
   m_ForceModuleActive: 0
---- !u!114 &1936436680
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1936436677}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_FirstSelected: {fileID: 0}
-  m_sendNavigationEvents: 1
-  m_DragThreshold: 10
 --- !u!1001 &1936455517
 PrefabInstance:
   m_ObjectHideFlags: 0
