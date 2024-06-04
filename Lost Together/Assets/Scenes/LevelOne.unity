@@ -10380,7 +10380,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 101939e5c5835418fb64140d24674fa1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameOverFirstButton: {fileID: 134297597}
+  gameOverFirstButton: {fileID: 507491613}
   isActive: 0
 --- !u!1 &836494734
 GameObject:
