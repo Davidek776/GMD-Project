@@ -43,7 +43,7 @@
 Play [Lost together](https://davidek776.github.io/GMD-Project/)
 
 ## YoutTube demo
-[Lost Together demo]()
+[Lost Together demo](https://www.youtube.com/watch?v=6dfr7u_sdG8&ab_channel=D%C3%A1vidKoc%C3%BAr)
 
 ## Blog Posts
 #### Rollaball
