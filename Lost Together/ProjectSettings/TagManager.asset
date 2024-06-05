@@ -7,18 +7,28 @@ TagManager:
   - Player1
   - Player2
   - Ground
+  - DeadZone
+  - Spike
+  - Player2ControlsHint
+  - Player1ControlsHint
+  - InGameCanvas
+  - Enemy
+  - Checkpoint
+  - JoinInstructions
+  - PlayerControls
+  - Box
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - NewGround
   - Water
   - UI
   - Ground
   - Player1
   - Player2
-  - 
-  - 
+  - SunTwo
+  - Enemy
   - 
   - 
   - 
@@ -43,4 +53,10 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Players
+    uniqueID: 4124914141
+    locked: 0
+  - name: Foreground
+    uniqueID: 2151179359
     locked: 0
